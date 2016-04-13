@@ -13,9 +13,8 @@
 
 // ERROR
  ...Please try running this command again as root/Administrator
-// I then used the following instead of sudo based on online advice, 
-// though I have previously used sudo when running into root/Administrator errors. 
-// I think I had to use sudo to install npm originally so I'm wondering if this is part of the issue?:
+// used the following instead of sudo based on forum advice, 
+// have previously used sudo when running into root/Administrator errors. 
 
 ~ fivedoor$ sudo chown -R $USER /usr/local
 
