@@ -421,7 +421,8 @@ fivedoors-MacBook-Pro:~ fivedoor$ npm update -g
 -bash: /usr/local/bin/npm: No such file or directory
 
 // Try 
-// Source: 
+// Source: https://github.com/npm/npm/issues/4099
+// http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo
 fivedoors-MacBook-Pro:~ fivedoor$ sudo chown -R $USER /usr/local/lib/node_modules
 Password:
 
@@ -430,7 +431,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@lts
 -bash: /usr/local/bin/npm: No such file or directory
 
 // Try and Success
-// Source:
+// Source: https://github.com/npm/npm/issues/4099
 fivedoors-MacBook-Pro:~ fivedoor$ curl -L http://npmjs.org/install.sh | sudo sh
 
 //This worked
@@ -526,7 +527,7 @@ Build failed
 
 
 // Try install homebrew to update git 
-// Source: 
+// Source: ??
 
 // check git
 fivedoors-MacBook-Pro:~ fivedoor$ git --version
