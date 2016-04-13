@@ -13,7 +13,9 @@
 
 // ERROR
  ...Please try running this command again as root/Administrator
-// I then used the following instead of sudo based on online advice, though I have previously used sudo when running into root/Administrator errors. I think I had to use sudo to install npm originally so I'm wondering if this is part of the issue:
+// I then used the following instead of sudo based on online advice, 
+// though I have previously used sudo when running into root/Administrator errors. 
+// I think I had to use sudo to install npm originally so I'm wondering if this is part of the issue?:
 
 ~ fivedoor$ sudo chown -R $USER /usr/local
 
@@ -1057,6 +1059,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ node-gyp -v
 
 fivedoors-MacBook-Pro:~ fivedoor$ npm explore npm -g -- npm install node-gyp@latest
 
+// ERRORS and lots...
 npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm
 npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules
 npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules
@@ -1136,6 +1139,8 @@ Password:
 
 // and retry 
 fivedoors-MacBook-Pro:~ fivedoor$ npm -g -- npm install node-gyp@latest
+
+// No errors jus this... 
 Usage: npm <command>
 
 where <command> is one of:
