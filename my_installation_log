@@ -1,0 +1,1176 @@
+//////////// VERSIONS as of 280316  ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.1
+// - node v4.3.1
+// - Xcode 3.2.6
+// - GCC 4.2.1 
+
+
+//////////// FOUNDATION - first attempt ///////////////
+
+  ~ fivedoor$ npm install foundation-cli --global
+
+// ERROR
+ ...Please try running this command again as root/Administrator
+// I then used the following instead of sudo based on online advice, though I have previously used sudo when running into root/Administrator errors. I think I had to use sudo to install npm originally so I'm wondering if this is part of the issue:
+
+~ fivedoor$ sudo chown -R $USER /usr/local
+
+~ fivedoor$ npm install foundation-cli --global
+:zurb-foundation-course fivedoor$ foundation new
+
+// ERROR
+There were some problems during the installation.
+ ✓ New project folder created.
+ ✗ Node modules not installed. Try running npm install manually.
+ ✓ Bower components installed.
+ 
+ 
+ 
+/////////////// NPM TROUBLESHOOT ////////////////
+
+// Try to troubleshoot and reinstall npm
+// Source: http://foundation.zurb.com/forum/posts/23820-node-modules-not-installed
+
+~ fivedoor$ git clone https://github.com/zurb/foundation-apps-template.git myApp
+
+:myApp fivedoor$ npm install
+
+// ERROR
+...gyp: No Xcode or CLT version detected!
+
+// Try install node-sass and get same errors
+npm install node-sass
+
+// Try install gcc and not found
+npm install gcc
+
+// Download and installed Xcode 3.2.6 
+// Try the npm install again 
+// No Xcode or CLT errorthis time but other errors...
+
+// ERROR 1
+Error 1)
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/zurb-foundation-course/myApp/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/zurb-foundation-course/myApp/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/zurb-foundation-course/myApp/node_modules/node-sass
+gyp ERR! node -v v4.3.1
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+
+
+// ERROR 2
+Error 2)  
+npm ERR! Darwin 10.8.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+npm ERR! node v4.3.1
+npm ERR! npm  v3.8.1
+npm ERR! code ELIFECYCLE
+
+npm ERR! node-sass@3.4.2 postinstall: `node scripts/build.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the node-sass@3.4.2 postinstall script 'node scripts/build.js'.
+
+
+// Try to troubleshoot based on advice:
+// Source: https://github.com/sass/node-sass/issues/1265
+// QUOTE:  "I solved this problem by updating my gcc from 4.4 to 4.7."
+// The version of GCC is I have is 4.2.1 
+
+// Try
+// Source:  https://github.com/nodejs/node-gyp/issues/773
+fivedoors-MacBook-Pro:myApp fivedoor$ cd /usr/local/lib sudo ln -s ../../lib/libSystem.B.dylib libgcc_s.10.5.dylib
+
+// Woops - Accidentally Try install in wrong folder (no response) so Try uninstall: 
+fivedoors-MacBook-Pro:lib fivedoor$ npm install
+fivedoors-MacBook-Pro:lib fivedoor$ npm uninstall
+
+// ERROR
+npm ERR! npm uninstall [<@scope>/]<pkg>[@<version>]... [--save|--save-dev|--save-optional]
+npm ERR! 
+npm ERR! aliases: remove, rm, r, un, unlink
+
+// Try npm install again
+fivedoors-MacBook-Pro:myApp fivedoor$ npm install
+
+// ERROR 
+// same errors flagged
+
+// Try
+// Source: http://superuser.com/questions/310809/
+fivedoors-MacBook-Pro:myApp fivedoor$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+// returns
+Password:
+sudo: add-apt-repository: command not found
+// Duh - ok add-apt is ubuntu command so skip this
+
+// Try check NPM version and update NPM 
+fivedoors-MacBook-Pro:~ fivedoor$ npm -v
+3.8.1
+fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@latest
+
+// Update NPM successful!
+fivedoors-MacBook-Pro:~ fivedoor$ npm -v
+3.8.5
+
+// Try clean cache
+fivedoors-MacBook-Pro:~ fivedoor$ npm cache clean
+
+
+/////////////// Node-Sass troubleshoot //////////////// 
+
+// Try install node-sass again
+fivedoors-MacBook-Pro:~ fivedoor$ npm install node-sass
+
+// ERROR
+// same/similar errors as npm install
+
+// Try 
+// Source: https://github.com/nodejs/node-gyp/issues/773
+fivedoors-MacBook-Pro:~ fivedoor$ cd /usr/local/lib sudo ln -s ../../lib/libSystem.B.dylib libgcc_s.10.5.dylib
+
+//Try install node-sass again
+fivedoors-MacBook-Pro:~ fivedoor$ npm install node-sass
+
+// ERROR
+// same/similar errors as npm install
+
+
+
+
+/////////////// NPM UNINSTALL ////////////////
+
+// Try
+// Source: https://docs.npmjs.com/misc/removing-npm
+fivedoors-MacBook-Pro:~ fivedoor$ sudo npm uninstall npm -g
+Password:
+sudo: npm: command not found
+
+// Try
+// Source: https://docs.npmjs.com/misc/removing-npm
+fivedoors-MacBook-Pro:~ fivedoor$ sudo make uninstall
+Password:
+make: *** No rule to make target `uninstall'.  Stop.
+
+'// Try
+// Source: https://docs.npmjs.com/misc/removing-npm
+fivedoors-MacBook-Pro:~ fivedoor$ rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
+
+// Try
+// Source: ??
+fivedoors-MacBook-Pro:~ fivedoor$ npm rm npm -g
+-bash: npm: command not found
+
+// Try
+fivedoors-MacBook-Pro:~ fivedoor$ locate npm
+
+WARNING: The locate database (/var/db/locate.database) does not exist.
+To create the database, run the following command:
+
+  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+Please be aware that the database can take some time to generate; once
+the database has been created, this message will no longer appear.
+
+// Try 
+fivedoors-MacBook-Pro:~ fivedoor$ locate node
+
+WARNING: The locate database (/var/db/locate.database) does not exist.
+To create the database, run the following command:
+
+  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+Please be aware that the database can take some time to generate; once
+the database has been created, this message will no longer appear.
+
+// Try and Fail
+// Source: https://docs.npmjs.com/misc/removing-npm
+fivedoors-MacBook-Pro:~ fivedoor$ npm uninstall npm
+-bash: npm: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm list installed
+-bash: npm: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ which node
+/usr/local/bin/node
+
+// Try
+// Source: ?? http://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x
+fivedoors-MacBook-Pro:~ fivedoor$ sudo rm -rf /usr/local/lib/dtrace/node.d
+Password:
+
+
+
+/////////////// NVM install attempt //////////////// 
+
+// Try 
+// Source: https://github.com/creationix/nvm
+fivedoors-MacBook-Pro:~ fivedoor$ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+
+// Try
+// Source:
+fivedoors-MacBook-Pro:.nvm fivedoor$ . ~/.nvm/nvm.sh
+
+// Try
+// Source: https://github.com/npm/npm/issues/4099
+fivedoors-MacBook-Pro:.nvm fivedoor$ nvm ls
+            N/A
+node -> stable (-> N/A) (default)
+iojs -> N/A (default)
+
+// Try
+// Source:
+fivedoors-MacBook-Pro:.nvm fivedoor$ source ~/.profile
+-bash: /Users/fivedoor/.profile: No such file or directory
+
+// Try
+fivedoors-MacBook-Pro:.nvm fivedoor$ which nvm
+fivedoors-MacBook-Pro:.nvm fivedoor$ where nvm
+-bash: where: command not found
+
+// Try
+fivedoors-MacBook-Pro:.nvm fivedoor$ nvm --help
+// works
+
+// Try confirm nvm version
+fivedoors-MacBook-Pro:.nvm fivedoor$ nvm --version
+0.31.0
+fivedoors-MacBook-Pro:.nvm fivedoor$ cd /Users/fivedoor
+fivedoors-MacBook-Pro:~ fivedoor$ nvm --version
+0.31.0
+
+// No sign of node or npm
+fivedoors-MacBook-Pro:~ fivedoor$ node --version
+-bash: node: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm --version
+-bash: npm: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm list -g
+-bash: npm: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ nvm ls
+            N/A
+node -> stable (-> N/A) (default)
+iojs -> N/A (default)
+
+// Try get latest nvm stable version
+fivedoors-MacBook-Pro:~ fivedoor$ nvm install stable
+
+Downloading https://nodejs.org/dist/v5.10.1/node-v5.10.1-darwin-x86.tar.gz...
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+Detected that you have 4 CPU thread(s)
+Set the number of jobs to 4 - 1 = 3 jobs to speed up the build
+Installing node v1.0 and greater from source is not currently supported
+fivedoors-MacBook-Pro:~ fivedoor$ nvm install stable
+Downloading https://nodejs.org/dist/v5.10.1/node-v5.10.1-darwin-x86.tar.gz...
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+Installing node v1.0 and greater from source is not currently supported
+fivedoors-MacBook-Pro:~ fivedoor$ nvm ls-remote stable
+        v5.10.1
+fivedoors-MacBook-Pro:~ fivedoor$ nvm install v4.4.2
+Downloading https://nodejs.org/dist/v4.4.2/node-v4.4.2-darwin-x86.tar.gz...
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+Installing node v1.0 and greater from source is not currently supported
+
+
+
+
+/////////////// NODE & NPM full namual uninstall //////////////// 
+// performed full manual uninstall 
+
+
+/////////////// NODE reinstall //////////////// 
+
+
+// Node is reinstalled via the nod.js website since couldn't get it installed with nvm
+
+// installer app confirms: 
+Node.js was installed at
+
+   /usr/local/bin/node
+
+npm was installed at
+
+   /usr/local/bin/npm
+
+Make sure that /usr/local/bin is in your $PATH.
+
+echo $PATH will print your path. If you see /usr/local/bin between some colons, then it's in your path.
+
+'// check to confirm  /usr/local/bin is in your $PATH: 
+fivedoors-MacBook-Pro:~ fivedoor$ echo $PATH
+/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin
+// OK
+
+// check to confirm node installed: 
+fivedoors-MacBook-Pro:~ fivedoor$ node
+> console.log('hello node');
+hello node
+undefined
+> 
+// OK
+
+// check node version: 
+fivedoors-MacBook-Pro:~ fivedoor$ node -v
+v4.4.2
+
+// check npm version: 
+fivedoors-MacBook-Pro:~ fivedoor$ npm -v
+2.15.0
+
+/////////////// NPM update  //////////////// 
+
+// npm version seems outdated. Try update to latet npm
+fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@lts
+
+// ERROR - looks like permissions/sudo issue
+npm ERR! Darwin 10.8.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "npm@lts"
+npm ERR! node v4.4.2
+npm ERR! npm  v2.15.0
+npm ERR! path /usr/local/lib/node_modules/npm
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall rmdir
+
+npm ERR! Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/npm'
+npm ERR!     at Error (native)
+npm ERR!  { [Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/npm']
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'rmdir',
+npm ERR!   path: '/usr/local/lib/node_modules/npm' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
+npm ERR! error rolling back Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/npm'
+npm ERR! error rolling back     at Error (native)
+npm ERR! error rolling back  { [Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/npm']
+npm ERR! error rolling back   errno: -13,
+npm ERR! error rolling back   code: 'EACCES',
+npm ERR! error rolling back   syscall: 'rmdir',
+npm ERR! error rolling back   path: '/usr/local/lib/node_modules/npm' }
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/fivedoor/npm-debug.log
+
+
+// Try fix using chown (not sudo) 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo chown -R $USER /usr/local
+Password:
+
+// Try update to latet npm again - now can not locate
+fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@lts
+-bash: /usr/local/bin/npm: No such file or directory
+
+// NPM seems to have disappeared
+fivedoors-MacBook-Pro:~ fivedoor$ npm -v
+-bash: /usr/local/bin/npm: No such file or directory
+
+// Try and fail with:
+// Source: https://github.com/npm/npm/issues/4099
+fivedoors-MacBook-Pro:~ fivedoor$ curl http://npmjs.org/install.sh | sh
+
+// ERROR
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+193   193  193   193    0     0    116      0  0:00:01  0:00:01 --:--:--   605
+sh: line 1: html: No such file or directory
+sh: line 2: syntax error near unexpected token `<'
+'h: line 2: `<head><title>301 Moved Permanently</title></head>
+
+// Try and fail with:
+// Source: https://github.com/npm/npm/issues/4099
+fivedoors-MacBook-Pro:~ fivedoor$ npm update -g
+-bash: /usr/local/bin/npm: No such file or directory
+
+// Try 
+// Source: 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo chown -R $USER /usr/local/lib/node_modules
+Password:
+
+// Try and fail update to latet npm again:
+fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@lts
+-bash: /usr/local/bin/npm: No such file or directory
+
+// Try and Success
+// Source:
+fivedoors-MacBook-Pro:~ fivedoor$ curl -L http://npmjs.org/install.sh | sudo sh
+
+//This worked
+
+//Confirm version of npm updated:
+fivedoors-MacBook-Pro:~ fivedoor$ npm --v
+3.8.6
+
+//Confirm version of gcc:
+fivedoors-MacBook-Pro:~ fivedoor$ gcc --version
+
+i686-apple-darwin10-gcc-4.2.1 (GCC) 4.2.1 (Apple Inc. build 5666) (dot 3)
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+
+//////////// VERSIONS ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.6 		(was npm 3.8.1)
+// - node v4.4.2    (was node v4.3.1) 
+// - Xcode 3.2.6
+// - GCC 4.2.1 
+// - nvm 0.31.0
+// - git version 1.8.4.2  (latest is 2.6.4 )
+
+
+
+
+
+//////////// FOUNDATION - second attempt ///////////////
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm install foundation-cli --global
+
+//This worked
+
+// Install project
+fivedoors-MacBook-Pro:~ fivedoor$ cd /Users/fivedoor/Documents/development/zurb-foundationfivedoors-MacBook-Pro:zurb-foundation fivedoor$ foundation new
+? What are you building today? An email (Foundation for Emails)
+? What's the project called? (no spaces) test123
+
+'// ERROR - due to bad internet I think: 
+npm ERR! registry error parsing json
+
+// retry but first clean cache 
+=fivedoors-MacBook-Pro:zurb-foundation fivedoor$ npm cache clean
+fivedoors-MacBook-Pro:zurb-foundation fivedoor$ foundation new
+? What are you building today? An email (Foundation for Emails)
+? What's the project called? (no spaces) test567
+
+
+'// ERROR (minor?) 
+
+> jpegtran-bin@3.0.6 postinstall /Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin
+> node lib/install.js
+
+  ⚠ The `/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor/jpegtran` binary doesn't seem to work correctly
+  ⚠ jpegtran pre-build test failed
+  ℹ compiling from source
+  ✖ Error: touch configure.ac aclocal.m4 configure Makefile.am Makefile.in && ./configure --disable-shared --prefix="/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" --bindir="/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" && make install
+Command failed: /bin/sh -c ./configure --disable-shared --prefix="/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" --bindir="/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor"
+configure: error: installation or configuration problem: assembler cannot create object files.
+
+    at ChildProcess.exithandler (child_process.js:213:12)
+    at emitTwo (events.js:87:13)
+    at ChildProcess.emit (events.js:172:7)
+    at maybeClose (internal/child_process.js:827:16)
+    at Socket.<anonymous> (internal/child_process.js:319:11)
+    at emitOne (events.js:77:13)
+    at Socket.emit (events.js:169:7)
+    at Pipe._onclose (net.js:477:12)
+
+'// ERROR 
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb-foundation/test567/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+
+// !!! STILL getting gyp error after complete reinstalls !!!
+
+
+// Try install homebrew to update git 
+// Source: 
+
+// check git
+fivedoors-MacBook-Pro:~ fivedoor$ git --version
+git version 1.8.4.2
+
+fivedoors-MacBook-Pro:~ fivedoor$ which git
+/usr/local/git/bin/git
+
+// Try install homebrew 
+// Source: http://brew.sh/
+fivedoors-MacBook-Pro:~ fivedoor$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+"// ERROR - some kind of time out??
+
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/Library/...
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+==> The following directories will be made group writable:
+/usr/local/share/man/man5
+/usr/local/share/man/man7
+==> The following directories will have their owner set to fivedoor:
+/usr/local/share/man/man5
+/usr/local/share/man/man7
+==> The following directories will have their group set to admin:
+/usr/local/share/man/man5
+/usr/local/share/man/man7
+
+Press RETURN to continue or any other key to abort
+==> /usr/bin/sudo /bin/chmod g+rwx /usr/local/share/man/man5 /usr/local/share/man/man7
+Password:
+==> /usr/bin/sudo /usr/sbin/chown fivedoor /usr/local/share/man/man5 /usr/local/share/man/man7
+==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local/share/man/man5 /usr/local/share/man/man7
+==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
+==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
+==> /usr/bin/sudo /usr/sbin/chown fivedoor /Library/Caches/Homebrew
+==> Downloading and installing Homebrew...
+remote: Counting objects: 458, done.
+remote: Compressing objects: 100% (416/416), done.
+remote: Total 458 (delta 28), reused 299 (delta 17), pack-reused 0
+Receiving objects: 100% (458/458), 712.56 KiB | 151.00 KiB/s, done.
+Resolving deltas: 100% (28/28), done.
+From https://github.com/Homebrew/brew
+ * [new branch]      master     -> origin/master
+HEAD is now at 4a7cd16 Auto-update when running `brew install`/`upgrade`.
+==> Tapping homebrew/core
+Cloning into '/usr/local/Library/Taps/homebrew/homebrew-core'...
+remote: Counting objects: 3659, done.
+remote: Compressing objects: 100% (3544/3544), done.
+Receiving objects:  13% (476/3659), 364.00 KiB | 127.00 KiB/s   
+
+// abandoned at this point as nothing further after couple hours
+^Cfatal: The remote end hung up unexpectedlyiB | 127.00 KiB/s   
+Failed during: /usr/local/bin/brew tap homebrew/core
+
+
+// retry 
+==> Installation successful!
+
+//brew install git
+fivedoors-MacBook-Pro:~ fivedoor$ brew install git
+Warning: You are using OS X 10.6.
+We (and Apple) do not provide support for this old version.
+You may encounter build failures or other breakages.
+
+// still using same version of git (the latest that support Snow Leopard apparently)
+// source: http://stackoverflow.com/questions/24741643/problems-installing-git-with-snow-leopard
+fivedoors-MacBook-Pro:~ fivedoor$ git --version
+git version 1.8.4.2
+
+
+// Check for nvm and it's now not found ??
+fivedoors-MacBook-Pro:~ fivedoor$ nvm --version
+-bash: nvm: command not found
+
+
+/////////////  install nvm again ///////////////////
+
+// source: http://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
+
+// brew update
+fivedoors-MacBook-Pro:~ fivedoor$ brew update
+Updated 1 tap (homebrew/core).
+==> Updated Formulae
+disco
+
+// brew install nvm
+fivedoors-MacBook-Pro:~ fivedoor$ brew install nvm
+Warning: You are using OS X 10.6.
+We (and Apple) do not provide support for this old version.
+You may encounter build failures or other breakages.
+
+==> Caveats
+Please note that upstream has asked us to make explicit managing
+nvm via Homebrew is unsupported by them and you should check any
+problems against the standard nvm install method prior to reporting.
+
+You should create NVM's working directory if it doesn't exist:
+
+  mkdir ~/.nvm
+
+Add the following to ~/.bash_profile or your desired shell
+configuration file:
+
+  export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh"
+
+You can set $NVM_DIR to any location, but leaving it unchanged from
+/usr/local/Cellar/nvm/0.31.0 will destroy any nvm-installed Node installations
+upon upgrade/reinstall.
+
+Type `nvm help` for further information.
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+==> Summary
+/usr/local/Cellar/nvm/0.31.0: 6 files, 86K, built in 11 seconds
+
+// brew (final command from 
+// source: http://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
+fivedoors-MacBook-Pro:~ fivedoor$ source $(brew --prefix nvm)/nvm.sh
+
+// success:
+fivedoors-MacBook-Pro:~ fivedoor$ nvm --version
+0.31.0
+
+// create .bash_profile
+fivedoors-MacBook-Pro:~ fivedoor$ touch .bash_profile
+
+// manually added the following in the file as suggested above:
+
+  export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh":
+
+
+
+//////////// FOUNDATION - third attempt ///////////////
+
+// foundation new
+
+// ERROR
+cc1plus: error: unrecognized command line option "-std=c++11"
+cc1plus: error: unrecognized command line option "-stdlib=libc++"
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb-foundation/test789/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb-foundation/test789/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb-foundation/test789/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+// same issue
+
+//////////// NPM --optional install ///////////////
+
+// Try install npm optional 
+// source: http://stackoverflow.com/questions/30498534/error-on-npm-install-g-protractor
+// source: https://www.dsebastien.net/2015/07/01/quick-npm-tip-and-a-little-rant-about-node-gyp/
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm install --no-optional
+
+// ERROR? - what is this?
+npm WARN enoent ENOENT: no such file or directory, open '/Users/fivedoor/package.json'
+npm WARN fivedoor No description
+npm WARN fivedoor No repository field.
+npm WARN fivedoor No README data
+npm WARN fivedoor No license field.
+fivedoors-MacBook-Pro:~ fivedoor$ 
+
+// check npm ls 
+fivedoors-MacBook-Pro:~ fivedoor$ npm ls
+/Users/fivedoor
+└── (empty)
+
+// Quote: The .npm folder is NOT an install location. It's a cache. npm cache clean will delete it.
+// https://github.com/npm/npm/issues/1103
+// https://github.com/npm/npm/issues/9436
+// https://github.com/npm/npm/issues/9113
+// https://www.npmjs.com/package/npm-autoinit
+// http://stackoverflow.com/questions/31952747/npm-throws-enoent-warnings-on-every-install-uninstall-ls
+
+// Check npm is still installed
+fivedoors-MacBook-Pro:~ fivedoor$ npm --v
+3.8.6
+
+
+//  Try FOUNDATION - foundation new  again...
+
+// ERROR -same issue
+cc1plus: error: unrecognized command line option "-std=c++11"
+cc1plus: error: unrecognized command line option "-stdlib=libc++"
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb-foundation/test888/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb-foundation/test888/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb-foundation/test888/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+
+//////////// VERSIONS recap ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.6 		(was npm 3.8.1)
+// - node v4.4.2    (was node v4.3.1) 
+// - Xcode 3.2.6
+// - GCC 4.2.1 
+// - nvm 0.31.0
+// - git version 1.8.4.2  (latest is 2.6.4 )
+// - g++ 4.2.1 
+
+
+/////////////////// Troubleshoot individual ERROR:  ////////////////////////
+ cc1plus: error: unrecognized command line option "-std=c++11"
+ 
+// Source: http://stackoverflow.com/questions/14674597/cc1plus-error-unrecognized-command-line-option-std-c11-with-g
+// Quote: C++11 is only supported in >= 4.3. 
+// I am currently running  g++ 4.2.1  Looks like could need to upgrade?
+
+
+
+/////////////////// Installed Macports via dmg ////////////////////////
+// https://www.macports.org/install.php#installing
+// Source: http://stackoverflow.com/questions/14153725/installing-gcc-4-7-1-on-os-x
+
+
+/////////////////// UPDATE GCC G++ ////////////////////////
+// check for GCC availalbe - nothing
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --list gcc
+
+Warning: Unable to get active selected version: The specified group 'gcc' does not exist.
+Error: The 'list' command failed: The specified group 'gcc' does not exist.
+
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port install gcc_select
+Error: Port gcc_select not found
+
+// forgot to run this (as specified on site): 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port -v selfupdate
+
+// Success 
+ MacPorts base is already the latest version
+The ports tree has been updated. To upgrade your installed ports, you should run
+  port upgrade outdated
+
+// Try check again for GCC 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --list gcc
+
+Warning: Unable to get active selected version: The specified group 'gcc' does not exist.
+Error: The 'list' command failed: The specified group 'gcc' does not exist.
+
+// Try port install gcc_select again 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port install gcc_select
+--->  Fetching archive for gcc_select
+--->  Attempting to fetch gcc_select-0.1_8.darwin_10.noarch.tbz2 from http://mse.uk.packages.macports.org/sites/packages.macports.org/gcc_select
+--->  Attempting to fetch gcc_select-0.1_8.darwin_10.noarch.tbz2.rmd160 from http://mse.uk.packages.macports.org/sites/packages.macports.org/gcc_select
+--->  Installing gcc_select @0.1_8
+--->  Activating gcc_select @0.1_8
+--->  Cleaning gcc_select
+--->  Updating database of binaries
+
+// Try check again for GCC 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --list gcc
+Available versions for gcc:
+	gcc40
+	gcc42
+	llvm-gcc42
+	none (active)
+
+//  Try follow tip to update GCC 
+// Source: http://stackoverflow.com/questions/14153725/installing-gcc-4-7-1-on-os-x
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port selfupdate
+
+  Updating MacPorts base sources using rsync
+MacPorts base version 2.3.4 installed,
+MacPorts base version 2.3.4 downloaded.
+ Updating the ports tree
+ MacPorts base is already the latest version
+The ports tree has been updated. To upgrade your installed ports, you should run
+  port upgrade outdated
+
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port install gcc47
+// seems to work 
+
+// mp-gcc47 now available
+fivedoors-MacBook-Pro:~ fivedoor$ port select --list gcc
+Available versions for gcc:
+	gcc40
+	gcc42
+	llvm-gcc42
+	mp-gcc47
+	none (active)
+
+// set gcc to the MacPorts version:
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --set gcc mp-gcc47
+Password:
+Selecting 'mp-gcc47' for 'gcc' succeeded. 'mp-gcc47' is now active.
+
+// success but ERROR 
+fivedoors-MacBook-Pro:~ fivedoor$ gcc --version
+
+gcc-mp-4.7: error trying to exec '/opt/local/bin/i686-apple-darwin10-gcc-4.2.1': execvp: No such file or directory
+fivedoors-MacBook-Pro:~ fivedoor$ 
+
+
+// Try http://superuser.com/questions/423254/macports-gcc-select-error-trying-to-exec-i686-apple-darwin11-llvm-gcc-4-2
+fivedoors-MacBook-Pro:~ fivedoor$ hash
+hits	command
+   4	/usr/bin/gcc
+  11	/usr/bin/sudo
+   1	/opt/local/bin/port
+
+fivedoors-MacBook-Pro:~ fivedoor$ hash gcc
+
+// check 
+fivedoors-MacBook-Pro:~ fivedoor$ hash
+hits	command
+   0	/opt/local/bin/gcc
+  11	/usr/bin/sudo
+   1	/opt/local/bin/g++
+   1	/opt/local/bin/port
+
+
+// Confirm G++ updated to 4.7.4
+fivedoors-MacBook-Pro:~ fivedoor$ g++ --version
+
+g++ (MacPorts gcc47 4.7.4_5) 4.7.4
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// succes
+
+// Confirm GGCC updated to 4.7.4
+fivedoors-MacBook-Pro:~ fivedoor$ gcc --version
+gcc (MacPorts gcc47 4.7.4_5) 4.7.4
+Copyright (C) 2012 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+//success
+
+
+//////////// VERSIONS recap ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.6 		(was npm 3.8.1)
+// - node v4.4.2    (was node v4.3.1) 
+// - Xcode 3.2.6
+// - GCC 4.7.4
+// - g++ 4.7.4
+// - nvm 0.31.0
+// - git version 1.8.4.2  (latest is 2.6.4 )
+
+
+
+// and try FOUNDATION - foundation new  again...
+
+// ERROR -same issue this time minus the c++11 error
+
+g++: error: unrecognized command line option '-stdlib=libc++'
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+
+
+/////////////////// Troubleshoot individual ERROR:  ////////////////////////
+
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+
+
+// deleted the 
+~/.node-gyp folder 
+// restart mac
+// Source: https://github.com/nodejs/node-gyp/issues/809#
+
+
+/////// and try FOUNDATION - foundation new again...
+// FAIL
+// ERROR -same issue
+// Also appears node-gyp has been reinstalled during the process to main folder ~/
+
+// Try and Fail
+fivedoors-MacBook-Pro:~ fivedoor$ apt-get install libkrb5-dev
+-bash: apt-get: command not found
+// Source: https://github.com/nodejs/node-gyp/issues/809#
+// This ubuntu command so I guess why does nothing
+
+
+// Try uninstall foundation 
+// Source: https://teamtreehouse.com/community/uninstall-foundation-apps 
+fivedoors-MacBook-Pro:~ fivedoor$ npm uninstall -g foundation-cli
+
+// Try again to delete the 
+~/.node-gyp folder 
+
+// Try reinstall 
+fivedoors-MacBook-Pro:~ fivedoor$ npm install foundation-cli --global
+
+// Now Foundation install is throwing ERRORS 
+
+npm ERR! Darwin 10.8.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "foundation-cli" "--global"
+npm ERR! node v4.4.2
+npm ERR! npm  v3.8.6
+
+npm ERR! shasum check failed for /var/folders/8d/8dxBuF1UGCWKXTWhR1Z6dk+++TI/-Tmp-/npm-5120-37239c55/registry.npmjs.org/rx/-/rx-2.5.3.tgz
+npm ERR! Expected: 21adc7d80f02002af50dae97fd9dbf248755f566
+npm ERR! Actual:   58639d4238aa5c3970e4d9dd9113199f9a7950fb
+npm ERR! From:     https://registry.npmjs.org/rx/-/rx-2.5.3.tgz
+npm ERR! 
+npm ERR! If you need help, you may report this error at:
+npm ERR!     <https://github.com/npm/npm/issues>
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/fivedoor/npm-debug.log
+
+// Try again (lools like may be connection issue from forums
+// Success
+
+////// and try FOUNDATION - foundation new again...
+// FAIL
+// ERROR -same issue
+g++: error: unrecognized command line option '-stdlib=libc++'
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test130416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test130416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test130416-2/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+
+// Try 
+	npm cache clean -f
+	npm install -g n
+	n stable
+	npm install npm -g
+// Source: https://github.com/websockets/bufferutil/issues/25
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm cache clean -f
+npm WARN using --force I sure hope you know what you are doing.
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm install -g n
+/usr/local/bin/n -> /usr/local/lib/node_modules/n/bin/n
+/usr/local/lib
+└── n@2.1.0 
+
+fivedoors-MacBook-Pro:~ fivedoor$ n stable
+  install : node-v5.10.1
+  Error: invalid version 5.10.1
+
+// Gonna try the lts version then. Same issue
+fivedoors-MacBook-Pro:~ fivedoor$ n lts
+     install : node-v4.4.3
+  Error: invalid version 4.4.3
+
+// Troubleshoot based on:
+// https://github.com/tj/n/issues/116
+fivedoors-MacBook-Pro:~ fivedoor$ curl --version
+curl 7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8y zlib/1.2.3
+Protocols: tftp ftp telnet dict ldap http file https ftps 
+Features: GSS-Negotiate IPv6 Largefile NTLM SSL libz 
+
+fivedoors-MacBook-Pro:~ fivedoor$ head -v
+head: illegal option -- v
+usage: head [-n lines | -c bytes] [file ...]
+
+// No joy so try use nvm to install
+fivedoors-MacBook-Pro:~ fivedoor$ nvm install 4.4.3
+Downloading https://nodejs.org/dist/v4.4.3/node-v4.4.3-darwin-x86.tar.xz...
+######################################################################## 100.0%
+Checksums empty
+Usage:
+  List:    tar -tf <archive-filename>
+  Extract: tar -xf <archive-filename>
+  Create:  tar -cf <archive-filename> [filenames...]
+  Help:    tar --help
+Binary download failed, trying source.
+######################################################################## 100.0%
+Checksums empty
+tar: Unrecognized archive format: Inappropriate file type or format
+tar: Error exit delayed from previous errors.
+Binary download failed, trying source.
+Detected that you have 4 CPU thread(s)
+Set the number of jobs to 4 - 1 = 3 jobs to speed up the build
+Installing node v1.0 and greater from source is not currently supported
+ 
+// More errors now with nvm install
+
+
+////// changing tack / clutching at straws - try again reinstall node gyp 
+fivedoors-MacBook-Pro:~ fivedoor$ node-gyp -v
+-bash: node-gyp: command not found
+
+fivedoors-MacBook-Pro:~ fivedoor$ npm explore npm -g -- npm install node-gyp@latest
+
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol/node_modules/es5-ext/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/debug/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/minimatch/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/path-array/node_modules
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules
+balanced-match@0.3.0 node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match -> node_modules/balanced-match
+concat-map@0.0.1 node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map -> node_modules/concat-map
+brace-expansion@1.1.3 node_modules/node-gyp/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion -> node_modules/brace-expansion
+es6-symbol@3.0.2 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol -> node_modules/es6-symbol
+es5-ext@0.10.11 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol/node_modules/es5-ext -> node_modules/es5-ext
+d@0.1.1 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol/node_modules/d -> node_modules/d
+es6-iterator@2.0.0 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/es6-symbol/node_modules/es5-ext/node_modules/es6-iterator -> node_modules/es6-iterator
+lru-cache@2.7.3 node_modules/node-gyp/node_modules/minimatch/node_modules/lru-cache -> node_modules/lru-cache
+ms@0.7.1 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/debug/node_modules/ms -> node_modules/ms
+debug@2.2.0 node_modules/node-gyp/node_modules/path-array/node_modules/array-index/node_modules/debug -> node_modules/debug
+array-index@1.0.0 node_modules/node-gyp/node_modules/path-array/node_modules/array-index -> node_modules/array-index
+path-array@1.0.1 node_modules/node-gyp/node_modules/path-array -> node_modules/path-array
+sigmund@1.0.1 node_modules/node-gyp/node_modules/minimatch/node_modules/sigmund -> node_modules/sigmund
+minimatch@1.0.0 node_modules/node-gyp/node_modules/minimatch -> node_modules/minimatch
+npm@3.8.6 /usr/local/lib/node_modules/npm
+└── (empty)
+
+npm ERR! Darwin 10.8.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "node-gyp@latest"
+npm ERR! node v4.4.2
+npm ERR! npm  v3.8.6
+npm ERR! path /usr/local/lib/node_modules/npm
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall access
+
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm'
+npm ERR!     at Error (native)
+npm ERR!  { [Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm']
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib/node_modules/npm' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
+npm ERR! Darwin 10.8.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "node-gyp@latest"
+npm ERR! node v4.4.2
+npm ERR! npm  v3.8.6
+npm ERR! path npm-debug.log.3739609286
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall open
+
+npm ERR! Error: EACCES: permission denied, open 'npm-debug.log.3739609286'
+npm ERR!     at Error (native)
+npm ERR!  { [Error: EACCES: permission denied, open 'npm-debug.log.3739609286']
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'open',
+npm ERR!   path: 'npm-debug.log.3739609286' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /usr/local/lib/node_modules/npm/npm-debug.log
+npm ERR! code 1
+npm ERR! weird error 1
+
+
+// looks like permissions issue again
+// Try chown...
+
+fivedoors-MacBook-Pro:~ fivedoor$ sudo chown -R $USER /usr/local
+Password:
+
+// and retry 
+fivedoors-MacBook-Pro:~ fivedoor$ npm -g -- npm install node-gyp@latest
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, bin, bugs, c, cache, completion, config,
+    ddp, dedupe, deprecate, dist-tag, docs, edit, explore, get,
+    help, help-search, i, init, install, install-test, it, link,
+    list, ln, logout, ls, outdated, owner, pack, ping, prefix,
+    prune, publish, rb, rebuild, repo, restart, root,
+    run-script, s, se, search, set, shrinkwrap, star, stars,
+    start, stop, t, tag, team, test, tst, un, uninstall,
+    unpublish, unstar, up, update, v, version, view, whoami
+
+npm <cmd> -h     quick help on <cmd>
+npm -l           display full usage info
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+
+Specify configs in the ini-formatted file:
+    /Users/fivedoor/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@3.8.6 /usr/local/lib/node_modules/npm
+
+// there is no .npmrc file in the root folder
+
+
+
+//////////// VERSION recap 130416 ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.6 		(was npm 3.8.1)
+// - node v4.4.2    (was node v4.3.1) 
+// - Xcode 3.2.6
+// - GCC 4.7.4
+// - g++ 4.7.4
+// - nvm 0.31.0
+// - git version 1.8.4.2  (latest is 2.6.4 )
