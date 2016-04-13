@@ -209,14 +209,14 @@ Password:
 
 
 
-/////////////// NVM install attempt //////////////// 
+/////////////// NVM install - so can manage node and npm reinstallation //////////////// 
 
 // Try 
 // Source: https://github.com/creationix/nvm
 fivedoors-MacBook-Pro:~ fivedoor$ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
 
 // Try
-// Source:
+// Source: https://github.com/creationix/nvm
 fivedoors-MacBook-Pro:.nvm fivedoor$ . ~/.nvm/nvm.sh
 
 // Try
@@ -227,7 +227,7 @@ node -> stable (-> N/A) (default)
 iojs -> N/A (default)
 
 // Try
-// Source:
+// Source: ?
 fivedoors-MacBook-Pro:.nvm fivedoor$ source ~/.profile
 -bash: /Users/fivedoor/.profile: No such file or directory
 
@@ -308,25 +308,28 @@ tar: Error exit delayed from previous errors.
 Binary download failed, trying source.
 Installing node v1.0 and greater from source is not currently supported
 
-
+// Abandon and Try to start again from scratch...
 
 
 /////////////// NODE & NPM full namual uninstall //////////////// 
 // performed full manual uninstall 
+// http://apple.stackexchange.com/questions/93002/how-to-properly-update-git-on-mac
+    go to /usr/local/lib and delete any node and node_modules
+    go to /usr/local/include and delete any node and node_modules directory
+    if you installed with brew install node, then run brew uninstall node in your terminal
+    check your Home directory for any local or lib or include folders, and delete any node or node_modules from there
+    go to /usr/local/bin and delete any node executable
 
 
 /////////////// NODE reinstall //////////////// 
 
-
-// Node is reinstalled via the nod.js website since couldn't get it installed with nvm
+// Node isreinstalled via the nod.js website since couldn't get it installed with nvm
 
 // installer app confirms: 
 Node.js was installed at
-
    /usr/local/bin/node
 
 npm was installed at
-
    /usr/local/bin/npm
 
 Make sure that /usr/local/bin is in your $PATH.
@@ -354,7 +357,8 @@ v4.4.2
 fivedoors-MacBook-Pro:~ fivedoor$ npm -v
 2.15.0
 
-/////////////// NPM update  //////////////// 
+
+/////////////// now update NPM  //////////////// 
 
 // npm version seems outdated. Try update to latet npm
 fivedoors-MacBook-Pro:~ fivedoor$ npm install -g npm@lts
