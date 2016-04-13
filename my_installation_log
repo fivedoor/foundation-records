@@ -541,51 +541,10 @@ fivedoors-MacBook-Pro:~ fivedoor$ /usr/bin/ruby -e "$(curl -fsSL https://raw.git
 
 
 "// ERROR - some kind of time out??
-
-==> This script will install:
-/usr/local/bin/brew
-/usr/local/Library/...
-/usr/local/share/doc/homebrew
-/usr/local/share/man/man1/brew.1
-/usr/local/share/zsh/site-functions/_brew
-/usr/local/etc/bash_completion.d/brew
-==> The following directories will be made group writable:
-/usr/local/share/man/man5
-/usr/local/share/man/man7
-==> The following directories will have their owner set to fivedoor:
-/usr/local/share/man/man5
-/usr/local/share/man/man7
-==> The following directories will have their group set to admin:
-/usr/local/share/man/man5
-/usr/local/share/man/man7
-
-Press RETURN to continue or any other key to abort
-==> /usr/bin/sudo /bin/chmod g+rwx /usr/local/share/man/man5 /usr/local/share/man/man7
-Password:
-==> /usr/bin/sudo /usr/sbin/chown fivedoor /usr/local/share/man/man5 /usr/local/share/man/man7
-==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local/share/man/man5 /usr/local/share/man/man7
-==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
-==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
-==> /usr/bin/sudo /usr/sbin/chown fivedoor /Library/Caches/Homebrew
-==> Downloading and installing Homebrew...
-remote: Counting objects: 458, done.
-remote: Compressing objects: 100% (416/416), done.
-remote: Total 458 (delta 28), reused 299 (delta 17), pack-reused 0
-Receiving objects: 100% (458/458), 712.56 KiB | 151.00 KiB/s, done.
-Resolving deltas: 100% (28/28), done.
-From https://github.com/Homebrew/brew
- * [new branch]      master     -> origin/master
-HEAD is now at 4a7cd16 Auto-update when running `brew install`/`upgrade`.
-==> Tapping homebrew/core
-Cloning into '/usr/local/Library/Taps/homebrew/homebrew-core'...
-remote: Counting objects: 3659, done.
-remote: Compressing objects: 100% (3544/3544), done.
 Receiving objects:  13% (476/3659), 364.00 KiB | 127.00 KiB/s   
-
 // abandoned at this point as nothing further after couple hours
 ^Cfatal: The remote end hung up unexpectedlyiB | 127.00 KiB/s   
 Failed during: /usr/local/bin/brew tap homebrew/core
-
 
 // retry 
 ==> Installation successful!
@@ -670,6 +629,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ touch .bash_profile
 //////////// FOUNDATION - third attempt ///////////////
 
 // foundation new
+:zurb-foundation-course fivedoor$ foundation new
 
 // ERROR
 cc1plus: error: unrecognized command line option "-std=c++11"
@@ -899,6 +859,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
 // and try FOUNDATION - foundation new  again...
+:foundation fivedoor$ foundation new
+
 
 // ERROR -same issue this time minus the c++11 error
 
