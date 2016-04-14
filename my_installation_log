@@ -311,8 +311,8 @@ Installing node v1.0 and greater from source is not currently supported
 // Abandon and Try to start again from scratch...
 
 
-/////////////// NODE & NPM full namual uninstall //////////////// 
-// performed full manual uninstall 
+/////////////// NODE & NPM full  uninstall //////////////// 
+// performed full  uninstall 
 // http://apple.stackexchange.com/questions/93002/how-to-properly-update-git-on-mac
     go to /usr/local/lib and delete any node and node_modules
     go to /usr/local/include and delete any node and node_modules directory
@@ -1164,6 +1164,18 @@ fivedoors-MacBook-Pro:~ fivedoor$ node-gyp --version
 
 
 
+// Forum response from https://github.com/nodejs/node-gyp/issues/906
+//  You could try reporting that to the libsass project. It's not a node-gyp bug as such, I suspect that libsass has CLANG_CXX_LIBRARY set to libc++ in its binding.gyp.
+// I'm not sure how far you'll get, though. If you want to compile against node.js v4, you're going to need at least g++ 4.8. You could try downgrading to node v0.10 or v0.12 but I can't promise success. Good luck!
+
+fivedoors-MacBook-Pro:~ fivdoor$ sudo port install gcc48
+
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --set gcc mp-gcc48
+Selecting 'mp-gcc48' for 'gcc' succeeded. 'mp-gcc48' is now active.
+
+/////// and Try FOUNDATION -  again...
+:foundation fivedoor$ foundation new
+// ERROR - same issue still
 
 //////////// VERSION recap 130416 ///////////////
 
@@ -1171,7 +1183,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ node-gyp --version
 // - npm 3.8.6 		(was npm 3.8.1)
 // - node v4.4.2    (was node v4.3.1) 
 // - Xcode 3.2.6
-// - GCC 4.7.4
-// - g++ 4.7.4
+// - GCC 4.8.5
+// - g++ 4.8.5
 // - nvm 0.31.0
 // - git version 1.8.4.2  (latest is 2.6.4 )
