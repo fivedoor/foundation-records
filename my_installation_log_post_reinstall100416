@@ -848,7 +848,7 @@ npm@3.8.6 /usr/local/lib/node_modules/npm
 // there is no .npmrc file in the root folder ? 
 // .node-gyp in root folder is 4.4.2 - same as previously
 
-John-Hamptons-MacBook-Pro:~ johnhampton$ node-gyp --version
+fivedoors-MacBook-Pro:~ fivedoor$ node-gyp --version
 -bash: node-gyp: command not found
 
 
