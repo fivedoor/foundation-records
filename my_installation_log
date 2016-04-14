@@ -726,7 +726,8 @@ Build failed
  
 // Source: http://stackoverflow.com/questions/14674597/cc1plus-error-unrecognized-command-line-option-std-c11-with-g
 // Quote: C++11 is only supported in >= 4.3. 
-// I am currently running  g++ 4.2.1  Looks like could need to upgrade?
+// I am currently running  g++ 4.2.1  Looks like could need to upgrade? 
+// will need to install macports for this...
 
 
 
@@ -838,7 +839,7 @@ g++ (MacPorts gcc47 4.7.4_5) 4.7.4
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-// succes
+// success
 
 // Confirm GGCC updated to 4.7.4
 fivedoors-MacBook-Pro:~ fivedoor$ gcc --version
@@ -886,22 +887,37 @@ Build failed
 
 
 
-/////////////////// Troubleshoot individual ERROR:  ////////////////////////
-
+/////////////////// Troubleshoot ERROR:  ////////////////////////
 make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
 gyp ERR! build error 
 
-
+// Source: https://github.com/nodejs/node-gyp/issues/809#
 // deleted the 
 ~/.node-gyp folder 
 // restart mac
-// Source: https://github.com/nodejs/node-gyp/issues/809#
 
 
-/////// and try FOUNDATION - foundation new again...
-// FAIL
-// ERROR -same issue
+/////// and try FOUNDATION -  again...
+:foundation fivedoor$ foundation new
+
+// ERROR - same issue still
+g++: error: unrecognized command line option '-stdlib=libc++'
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb-foundation/test120416/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
 // Also appears node-gyp has been reinstalled during the process to main folder ~/
+
 
 // Try and Fail
 fivedoors-MacBook-Pro:~ fivedoor$ apt-get install libkrb5-dev
@@ -920,7 +936,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ npm uninstall -g foundation-cli
 // Try reinstall 
 fivedoors-MacBook-Pro:~ fivedoor$ npm install foundation-cli --global
 
-// Now Foundation install is throwing ERRORS 
+// Now Foundation install is throwing ERRORS ??!!
 
 npm ERR! Darwin 10.8.0
 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "foundation-cli" "--global"
@@ -938,12 +954,13 @@ npm ERR!     <https://github.com/npm/npm/issues>
 npm ERR! Please include the following file with any support request:
 npm ERR!     /Users/fivedoor/npm-debug.log
 
-// Try again (lools like may be connection issue from forums
-// Success
+// Try again (lools like may be connection issue from forums)
+// Success - installed
 
-////// and try FOUNDATION - foundation new again...
-// FAIL
-// ERROR -same issue
+
+/////// and Try FOUNDATION -  again...
+:foundation fivedoor$ foundation new
+// ERROR - same issue still
 g++: error: unrecognized command line option '-stdlib=libc++'
 make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
 gyp ERR! build error 
@@ -960,6 +977,8 @@ gyp ERR! node-gyp -v v3.3.1
 gyp ERR! not ok 
 Build failed
 
+
+/////////////////// Troubleshoot - try another angle ////////////////////////
 
 // Try 
 	npm cache clean -f
@@ -980,7 +999,7 @@ fivedoors-MacBook-Pro:~ fivedoor$ n stable
   install : node-v5.10.1
   Error: invalid version 5.10.1
 
-// Gonna try the lts version then. Same issue
+// Error - Gonna try the lts version then. Same issue
 fivedoors-MacBook-Pro:~ fivedoor$ n lts
      install : node-v4.4.3
   Error: invalid version 4.4.3
@@ -1017,13 +1036,19 @@ Set the number of jobs to 4 - 1 = 3 jobs to speed up the build
 Installing node v1.0 and greater from source is not currently supported
  
 // More errors now with nvm install
+// this still need to be resolved!
 
 
-////// changing tack / clutching at straws - try again reinstall node gyp 
+/////////////////// Troubleshoot - try reinstall node-gyp   ////////////////////////
+
+////// OK let's try again reinstall node gyp 
 fivedoors-MacBook-Pro:~ fivedoor$ node-gyp -v
 -bash: node-gyp: command not found
 
+// Source: https://github.com/nodejs/node-gyp/wiki/Updating-npm's-bundled-node-gyp
+// Source: https://github.com/nodejs/node-gyp/wiki/Updating-npm's-bundled-node-gyp
 fivedoors-MacBook-Pro:~ fivedoor$ npm explore npm -g -- npm install node-gyp@latest
+
 
 // ERRORS and lots...
 npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules/npm
@@ -1106,7 +1131,7 @@ Password:
 // and retry 
 fivedoors-MacBook-Pro:~ fivedoor$ npm -g -- npm install node-gyp@latest
 
-// No errors jus this... 
+// No errors this time just this... 
 Usage: npm <command>
 
 where <command> is one of:
@@ -1131,7 +1156,12 @@ Config info can be viewed via: npm help config
 
 npm@3.8.6 /usr/local/lib/node_modules/npm
 
-// there is no .npmrc file in the root folder
+// there is no .npmrc file in the root folder ? 
+// .node-gyp in root folder is 4.4.2 - same as previously
+
+John-Hamptons-MacBook-Pro:~ johnhampton$ node-gyp --version
+-bash: node-gyp: command not found
+
 
 
 
