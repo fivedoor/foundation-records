@@ -876,3 +876,64 @@ Selecting 'mp-gcc48' for 'gcc' succeeded. 'mp-gcc48' is now active.
 // - g++ 4.8.5
 // - nvm 0.31.0
 // - git version 1.8.4.2  (latest is 2.6.4 )
+
+
+// Follow advise to use clang
+// https://github.com/sass/libsass/issues/1998
+// https://ehsanakhgari.org/blog/2011-10-17/why-you-should-switch-clang-today-and-how
+
+// From running 'clang --version' I see I have clang version 1.7 installed. 
+
+fivedoors-MacBook-Pro:~ fivedoor$ which clang
+/usr/bin/clang
+
+// confirm path available
+fivedoors-MacBook-Pro:~ fivedoor$ echo $PATH
+/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin
+
+fivedoors-MacBook-Pro:~ fivedoor$ export CC=clang
+fivedoors-MacBook-Pro:~ fivedoor$ export CXX=clang++
+
+//  no errors - was expecting some kind of confirmation returned
+
+
+//////////////// retry foundation new install
+
+//  ERROR - some differences i.e. make: clang++: No such file or directory
+// so suggests clang was not installed correctly?
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+  clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+make: clang++: No such file or directory
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test150416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test150416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test150416/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+//  compare to the previous error - 
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+  g++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+g++: error: unrecognized command line option '-stdlib=libc++'
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
