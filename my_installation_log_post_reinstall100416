@@ -1,5 +1,3 @@
-
-
 /////////////// NODE & NPM full  uninstall //////////////// 
 // performed full  uninstall 
 // http://apple.stackexchange.com/questions/93002/how-to-properly-update-git-on-mac
@@ -862,21 +860,14 @@ fivedoors-MacBook-Pro:~ fivdoor$ sudo port install gcc48
 fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --set gcc mp-gcc48
 Selecting 'mp-gcc48' for 'gcc' succeeded. 'mp-gcc48' is now active.
 
+// delete node-gyp folder again 
+
 /////// and Try FOUNDATION -  again...
 :foundation fivedoor$ foundation new
 // ERROR - same issue still
 
-//////////// VERSION recap 130416 ///////////////
 
-// - MACOS X Version 10.6.8 
-// - npm 3.8.6 		(was npm 3.8.1)
-// - node v4.4.2    (was node v4.3.1) 
-// - Xcode 3.2.6
-// - GCC 4.8.5
-// - g++ 4.8.5
-// - nvm 0.31.0
-// - git version 1.8.4.2  (latest is 2.6.4 )
-
+///////////////////// Try use CLANG compiler and update //////////////////////////
 
 // Follow advise to use clang
 // https://github.com/sass/libsass/issues/1998
@@ -919,21 +910,205 @@ gyp ERR! node-gyp -v v3.3.1
 gyp ERR! not ok 
 Build failed
 
-//  compare to the previous error - 
-gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+
+// make: clang++: No such file or directory is not that bad, the commandline invocation could not find your compiler - can you try to find what is the full path to clang and clang++ and use it instead? export CC=/full/path/to/clang export CXX=/full/path/to/clang++
+// https://github.com/sass/libsass/issues/1998#issuecomment-211099908
+
+fivedoors-MacBook-Pro:~ fivedoor$ export CC=/usr/bin/clang
+fivedoors-MacBook-Pro:~ fivedoor$ export CXX=/usr/bin/clang++
+
+
+////// retry foundation new and FAIL 
+
+  /usr/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+make: /usr/bin/clang++: No such file or directory
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test180416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test180416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test180416-2/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+// http://lists.macromates.com/textmate-dev/2012-August/014715.html
+// http://apple.stackexchange.com/questions/227026/how-to-install-recent-clang-with-homebrewhttp://comments.gmane.org/gmane.os.apple.macports.user/38558
+// http://stackoverflow.com/questions/28203937/installing-llvm-libraries-along-with-xcode
+// http://apple.stackexchange.com/questions/227026/how-to-install-recent-clang-with-homebrew
+
+
+
+// Just try export CXX=/usr/bin/clang Can you double check /usr/bin/clang --version to make sure you are using your new clang installed and not the oldish one from Apple?
+// source https://github.com/sass/libsass/issues/1998
+
+/usr/bin/clang --version
+// returns:
+Apple clang version 1.7 (tags/Apple/clang-77) (based on LLVM 2.9svn)
+Target: x86_64-apple-darwin10
+Thread model: posix
+
+// looks like that is the version that came with 10.6.8 I think
+
+
+// Looks like I can use brew to install a later version with brew install --with-clang llvm
+
+
+fivedoors-MacBook-Pro:~ fivedoor$ brew install --with-clang llvm
+
+// some errors?...... 
+==> Downloading http://llvm.org/releases/3.6.2/cfe-3.6.2.src.tar.xz
+######################################################################## 100.0%
+==> cmake -G Unix Makefiles /private/tmp/llvm20160418-3373-j9xvbx/llvm-3.6.2.src -DCMAKE_C_
+Last 15 lines from /Users/fivedoor/Library/Logs/Homebrew/llvm/01.cmake:
+
+  make: *** [cmTC_324ed/fast] Error 2
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:25 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/tmp/llvm20160418-3373-z4qhkz/CMakeFiles/CMakeOutput.log".
+See also "/tmp/llvm20160418-3373-z4qhkz/CMakeFiles/CMakeError.log".
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+
+READ THIS: https://git.io/brew-troubleshooting
+If reporting this issue please do so at (not Homebrew/brew):
+  https://github.com/Homebrew/homebrew-core/issues
+
+Warning: You are using OS X 10.6.
+We (and Apple) do not provide support for this old version.
+You may encounter build failures or other breakages.
+
+
+// Check if clang is updated
+fivedoors-MacBook-Pro:~ fivedoor$ clang --version
+// NO! 
+Apple clang version 1.7 (tags/Apple/clang-77) (based on LLVM 2.9svn)
+Target: x86_64-apple-darwin10
+Thread model: posix
+
+
+
+////////// Troubleshoot failed update to clang ///////////////
+
+// http://stackoverflow.com/questions/21737201/problems-throwing-and-catching-exceptions-on-os-x-with-fno-rtti
+// http://comments.gmane.org/gmane.os.apple.macports.user/38558
+// http://stackoverflow.com/questions/10368617/how-to-install-clang-3-1-using-macports-osx-snow-leopard
+// http://macports.c.codesolution.site/970762-5741-install-clang-using-macports-osx-snow-leopard.html
+
+
+// check available versions of clang 
+fivedoors-MacBook-Pro:~ fivedoor$ port search clang
+
+//and install 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port install clang-3.6
+
+--->  Cleaning clang-3.6
+--->  Updating database of binaries
+--->  Scanning binaries for linking errors               
+--->  No broken files found.              
+
+// seemed to work so check                
+fivedoors-MacBook-Pro:~ fivedoor$ port select --list clang
+
+Available versions for clang:
+	mp-clang-3.6
+	none (active)
+
+// looks good so select 3.6 
+fivedoors-MacBook-Pro:~ fivedoor$ sudo port select --set clang mp-clang-3.6
+
+Password:
+Selecting 'mp-clang-3.6' for 'clang' succeeded. 'mp-clang-3.6' is now active.
+
+// Success 
+fivedoors-MacBook-Pro:foundation fivedoor$ clang++ --version
+clang version 3.6.2 (tags/RELEASE_362/final)
+Target: x86_64-apple-darwin10.8.0
+Thread model: posix
+fivedoors-MacBook-Pro:foundation fivedoor$ clang --version
+clang version 3.6.2 (tags/RELEASE_362/final)
+Target: x86_64-apple-darwin10.8.0
+Thread model: posix
+//check updated - success 
+
+
+
+////////// Try foundation new 
+
   g++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
 g++: error: unrecognized command line option '-stdlib=libc++'
 make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
 gyp ERR! build error 
 gyp ERR! stack Error: `make` failed with exit code: 2
-gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test190416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
 gyp ERR! stack     at emitTwo (events.js:87:13)
 gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
 gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
 gyp ERR! System Darwin 10.8.0
-gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
-gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test140416/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test190416/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test190416/node_modules/gulp-sass/node_modules/node-sass
 gyp ERR! node -v v4.4.2
 gyp ERR! node-gyp -v v3.3.1
 gyp ERR! not ok 
 Build failed
+
+// WTF it's using g++ again ?? 
+
+fivedoors-MacBook-Pro:foundation fivedoor$ export CC=/usr/bin/clang
+fivedoors-MacBook-Pro:foundation fivedoor$ export CXX=/usr/bin/clang++
+
+////////// Try foundation new 
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+  /usr/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/johnhampton/.node-gyp/4.4.2/include/node -I/Users/johnhampton/.node-gyp/4.4.2/src -I/Users/johnhampton/.node-gyp/4.4.2/deps/uv/include -I/Users/johnhampton/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+make: /usr/bin/clang++: No such file or directory
+make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 10.8.0
+gyp ERR! command "/usr/local/bin/node" "/Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass
+gyp ERR! node -v v4.4.2
+gyp ERR! node-gyp -v v3.3.1
+gyp ERR! not ok 
+Build failed
+
+// FAILS -doh - wrong clang path 
+
+//try again to set export location
+fivedoors-MacBook-Pro:foundation fivedoor$ export CC=/opt/local/bin/clang
+fivedoors-MacBook-Pro:foundation fivedoor$ export CXX=/opt/local/bin/clang++
+
+
+
+/////////// SUCCESS!!! /////////////// 
+
+// caveat - a lot of warnings 
+
+
+
+//////////// VERSION recap 130416 ///////////////
+
+// - MACOS X Version 10.6.8 
+// - npm 3.8.6 		(was npm 3.8.1)
+// - node v4.4.2    (was node v4.3.1) 
+// - Xcode 3.2.6
+// - GCC 4.8.5
+// - g++ 4.8.5
+// - nvm 0.31.0
+// - git version 1.8.4.2  (latest is 2.6.4 )
+// clang version 3.6.2 
