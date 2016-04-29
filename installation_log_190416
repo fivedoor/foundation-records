@@ -1,0 +1,734 @@
+Downloading the project template...
+Done downloading!
+
+Installing dependencies...
+
+ 
+> gifsicle@3.0.3 postinstall /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-gifsicle/node_modules/gifsicle
+> node lib/install.js
+
+  ⚠ The `/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-gifsicle/node_modules/gifsicle/vendor/gifsicle` binary doesn't seem to work correctly
+  ⚠ gifsicle pre-build test failed
+  ℹ compiling from source
+  ✔ gifsicle built successfully
+ 
+> optipng-bin@3.1.1 postinstall /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-optipng/node_modules/optipng-bin
+> node lib/install.js
+
+  ⚠ The `/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-optipng/node_modules/optipng-bin/vendor/optipng` binary doesn't seem to work correctly
+  ⚠ optipng pre-build test failed
+  ℹ compiling from source
+  ✔ optipng built successfully
+
+> jpegtran-bin@3.0.6 postinstall /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin
+> node lib/install.js
+
+  ⚠ The `/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor/jpegtran` binary doesn't seem to work correctly
+  ⚠ jpegtran pre-build test failed
+  ℹ compiling from source
+  ✖ Error: touch configure.ac aclocal.m4 configure Makefile.am Makefile.in && ./configure --disable-shared --prefix="/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" --bindir="/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" && make install
+Command failed: /bin/sh -c ./configure --disable-shared --prefix="/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor" --bindir="/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-jpegtran/node_modules/jpegtran-bin/vendor"
+configure: error: installation or configuration problem: assembler cannot create object files.
+
+    at ChildProcess.exithandler (child_process.js:213:12)
+    at emitTwo (events.js:87:13)
+    at ChildProcess.emit (events.js:172:7)
+    at maybeClose (internal/child_process.js:827:16)
+    at Socket.<anonymous> (internal/child_process.js:319:11)
+    at emitOne (events.js:77:13)
+    at Socket.emit (events.js:169:7)
+    at Pipe._onclose (net.js:477:12)
+
+> spawn-sync@1.0.15 postinstall /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/cross-spawn/node_modules/spawn-sync
+> node postinstall
+
+-
+> node-sass@3.4.2 install /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass
+> node scripts/install.js
+
+Binary downloaded and installed at /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/vendor/darwin-x64-46/binding.node
+
+> fsevents@1.0.11 install /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp/node_modules/chokidar/node_modules/fsevents
+> node-pre-gyp install --fallback-to-build
+
+[fsevents] Success: "/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp/node_modules/chokidar/node_modules/fsevents/lib/binding/Release/node-v46-darwin-x64/fse.node" is installed via remote
+
+> fsevents@1.0.11 install /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/browser-sync/node_modules/chokidar/node_modules/fsevents
+> node-pre-gyp install --fallback-to-build
+
+[fsevents] Success: "/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/browser-sync/node_modules/chokidar/node_modules/fsevents/lib/binding/Release/node-v46-darwin-x64/fse.node" is installed via remote
+
+> node-sass@3.4.2 postinstall /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass
+> node scripts/build.js
+
+` /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/vendor/darwin-x64-46/binding.node ` exists. 
+ testing binary.
+Problem with the binary.
+Manual build incoming.
+Building: /usr/local/bin/node /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js rebuild --verbose --libsass_ext= --libsass_cflags= --libsass_ldflags= --libsass_library=
+gyp info it worked if it ends with ok
+gyp verb cli [ '/usr/local/bin/node',
+gyp verb cli   '/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js',
+gyp verb cli   'rebuild',
+gyp verb cli   '--verbose',
+gyp verb cli   '--libsass_ext=',
+gyp verb cli   '--libsass_cflags=',
+gyp verb cli   '--libsass_ldflags=',
+gyp verb cli   '--libsass_library=' ]
+gyp info using node-gyp@3.3.1
+gyp info using node@4.4.2 | darwin | x64
+gyp verb command rebuild []
+gyp verb command clean []
+gyp verb clean removing "build" directory
+gyp verb command configure []
+gyp WARN download NVM_NODEJS_ORG_MIRROR is deprecated and will be removed in node-gyp v4, please use NODEJS_ORG_MIRROR
+gyp verb check python checking for Python executable "python2" in the PATH
+gyp verb `which` succeeded python2 /usr/local/bin/python2
+gyp verb check python version `/usr/local/bin/python2 -c "import platform; print(platform.python_version());"` returned: "2.7.11\n"
+gyp verb get node dir no --target version specified, falling back to host node version: 4.4.2
+gyp verb command install [ '4.4.2' ]
+gyp WARN download NVM_NODEJS_ORG_MIRROR is deprecated and will be removed in node-gyp v4, please use NODEJS_ORG_MIRROR
+gyp verb install input version string "4.4.2"
+gyp verb install installing version: 4.4.2
+gyp verb install --ensure was passed, so won't reinstall if already installed
+gyp verb install version is already installed, need to check "installVersion"
+gyp verb got "installVersion" 9
+gyp verb needs "installVersion" 9
+gyp verb install version is good
+gyp verb get node dir target node version installed: 4.4.2
+gyp verb build dir attempting to create "build" dir: /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/build
+gyp verb build dir "build" dir needed to be created? /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/build
+gyp verb build/config.gypi creating config file
+gyp verb build/config.gypi writing out config file: /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/build/config.gypi
+gyp verb config.gypi checking for gypi file: /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/config.gypi
+gyp verb common.gypi checking for gypi file: /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/common.gypi
+gyp verb gyp gyp format was not specified; forcing "make"
+gyp info spawn /usr/local/bin/python2
+gyp info spawn args [ '/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args   'binding.gyp',
+gyp info spawn args   '-f',
+gyp info spawn args   'make',
+gyp info spawn args   '-I',
+gyp info spawn args   '/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/build/config.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/addon.gypi',
+gyp info spawn args   '-I',
+gyp info spawn args   '/Users/fivedoor/.node-gyp/4.4.2/include/node/common.gypi',
+gyp info spawn args   '-Dlibrary=shared_library',
+gyp info spawn args   '-Dvisibility=default',
+gyp info spawn args   '-Dnode_root_dir=/Users/fivedoor/.node-gyp/4.4.2',
+gyp info spawn args   '-Dnode_gyp_dir=/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp',
+gyp info spawn args   '-Dnode_lib_file=node.lib',
+gyp info spawn args   '-Dmodule_root_dir=/Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass',
+gyp info spawn args   '--depth=.',
+gyp info spawn args   '--no-parallel',
+gyp info spawn args   '--generator-output',
+gyp info spawn args   'build',
+gyp info spawn args   '-Goutput_dir=.' ]
+gyp verb command build []
+gyp WARN download NVM_NODEJS_ORG_MIRROR is deprecated and will be removed in node-gyp v4, please use NODEJS_ORG_MIRROR
+gyp verb build type Release
+gyp verb architecture x64
+gyp verb node dev dir /Users/fivedoor/.node-gyp/4.4.2
+gyp verb `which` succeeded for `make` /usr/bin/make
+gyp info spawn make
+gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+In file included from ../src/libsass/src/ast.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+../src/libsass/src/ast.cpp:294:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if ((typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Sele...
+                    ^
+../src/libsass/src/ast.cpp:294:70: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if ((typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Sele...
+                                                                     ^
+../src/libsass/src/ast.cpp:302:20: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if (typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Selector))
+                   ^
+../src/libsass/src/ast.cpp:302:69: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if (typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Selector))
+                                                                    ^
+6 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/base64vlq.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/base64vlq.o ../src/libsass/src/base64vlq.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/bind.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/bind.o ../src/libsass/src/bind.cpp
+In file included from ../src/libsass/src/bind.cpp:2:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/cencode.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/cencode.o ../src/libsass/src/cencode.c
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/color_maps.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/color_maps.o ../src/libsass/src/color_maps.cpp
+In file included from ../src/libsass/src/color_maps.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/constants.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/constants.o ../src/libsass/src/constants.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/context.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/context.o ../src/libsass/src/context.cpp
+In file included from ../src/libsass/src/context.cpp:14:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/cssize.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/cssize.o ../src/libsass/src/cssize.cpp
+In file included from ../src/libsass/src/cssize.cpp:5:
+In file included from ../src/libsass/src/cssize.hpp:4:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/emitter.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/emitter.o ../src/libsass/src/emitter.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/environment.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/environment.o ../src/libsass/src/environment.cpp
+In file included from ../src/libsass/src/environment.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/error_handling.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/error_handling.o ../src/libsass/src/error_handling.cpp
+In file included from ../src/libsass/src/error_handling.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/eval.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/eval.o ../src/libsass/src/eval.cpp
+In file included from ../src/libsass/src/eval.cpp:9:
+In file included from ../src/libsass/src/eval.hpp:5:
+In file included from ../src/libsass/src/listize.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+../src/libsass/src/eval.cpp:641:70: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (operand->concrete_type() == Expression::NULL_VAL && typeid(*(u->operand())) == typeid(Variable)) {
+                                                                     ^
+3 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/expand.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/expand.o ../src/libsass/src/expand.cpp
+In file included from ../src/libsass/src/expand.cpp:8:
+In file included from ../src/libsass/src/expand.hpp:6:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/extend.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/extend.o ../src/libsass/src/extend.cpp
+In file included from ../src/libsass/src/extend.cpp:5:
+In file included from ../src/libsass/src/extend.hpp:6:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/file.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/file.o ../src/libsass/src/file.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/functions.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/functions.o ../src/libsass/src/functions.cpp
+In file included from ../src/libsass/src/functions.cpp:2:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/inspect.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/inspect.o ../src/libsass/src/inspect.cpp
+In file included from ../src/libsass/src/inspect.cpp:8:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/json.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/json.o ../src/libsass/src/json.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/lexer.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/lexer.o ../src/libsass/src/lexer.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/listize.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/listize.o ../src/libsass/src/listize.cpp
+In file included from ../src/libsass/src/listize.cpp:5:
+In file included from ../src/libsass/src/listize.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/memory_manager.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/memory_manager.o ../src/libsass/src/memory_manager.cpp
+In file included from ../src/libsass/src/memory_manager.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/node.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/node.o ../src/libsass/src/node.cpp
+In file included from ../src/libsass/src/node.cpp:3:
+In file included from ../src/libsass/src/node.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/output.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/output.o ../src/libsass/src/output.cpp
+In file included from ../src/libsass/src/output.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/parser.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/parser.o ../src/libsass/src/parser.cpp
+In file included from ../src/libsass/src/parser.cpp:4:
+In file included from ../src/libsass/src/parser.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/plugins.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/plugins.o ../src/libsass/src/plugins.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/position.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/position.o ../src/libsass/src/position.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/prelexer.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/prelexer.o ../src/libsass/src/prelexer.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/remove_placeholders.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/remove_placeholders.o ../src/libsass/src/remove_placeholders.cpp
+In file included from ../src/libsass/src/remove_placeholders.cpp:1:
+In file included from ../src/libsass/src/remove_placeholders.hpp:6:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass.o ../src/libsass/src/sass.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass2scss.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass2scss.o ../src/libsass/src/sass2scss.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_context.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass_context.o ../src/libsass/src/sass_context.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_functions.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass_functions.o ../src/libsass/src/sass_functions.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_interface.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass_interface.o ../src/libsass/src/sass_interface.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_util.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass_util.o ../src/libsass/src/sass_util.cpp
+In file included from ../src/libsass/src/sass_util.cpp:1:
+In file included from ../src/libsass/src/node.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/sass_values.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/sass_values.o ../src/libsass/src/sass_values.cpp
+In file included from ../src/libsass/src/sass_values.cpp:4:
+In file included from ../src/libsass/src/eval.hpp:5:
+In file included from ../src/libsass/src/listize.hpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/source_map.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/source_map.o ../src/libsass/src/source_map.cpp
+In file included from ../src/libsass/src/source_map.cpp:7:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/to_c.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/to_c.o ../src/libsass/src/to_c.cpp
+In file included from ../src/libsass/src/to_c.cpp:2:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/to_string.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/to_string.o ../src/libsass/src/to_string.cpp
+In file included from ../src/libsass/src/to_string.cpp:6:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/to_value.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/to_value.o ../src/libsass/src/to_value.cpp
+In file included from ../src/libsass/src/to_value.cpp:1:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/units.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/units.o ../src/libsass/src/units.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/utf8_string.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/utf8_string.o ../src/libsass/src/utf8_string.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/util.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/util.o ../src/libsass/src/util.cpp
+In file included from ../src/libsass/src/util.cpp:2:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/values.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/values.o ../src/libsass/src/values.cpp
+In file included from ../src/libsass/src/values.cpp:2:
+In file included from ../src/libsass/src/values.hpp:4:
+../src/libsass/src/ast.hpp:2082:18: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+      if (typeid(*(*this)[0]) == typeid(Type_Selector))
+                 ^
+../src/libsass/src/ast.hpp:2101:21: warning: expression with side effects will be evaluated despite being used
+      as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+             typeid(*(*this)[0]) == typeid(Parent_Selector);
+                    ^
+2 warnings generated.
+  rm -f Release/sass.a && ./gyp-mac-tool filter-libtool libtool  -static -o Release/sass.a Release/obj.target/libsass/src/libsass/src/ast.o Release/obj.target/libsass/src/libsass/src/base64vlq.o Release/obj.target/libsass/src/libsass/src/bind.o Release/obj.target/libsass/src/libsass/src/cencode.o Release/obj.target/libsass/src/libsass/src/color_maps.o Release/obj.target/libsass/src/libsass/src/constants.o Release/obj.target/libsass/src/libsass/src/context.o Release/obj.target/libsass/src/libsass/src/cssize.o Release/obj.target/libsass/src/libsass/src/emitter.o Release/obj.target/libsass/src/libsass/src/environment.o Release/obj.target/libsass/src/libsass/src/error_handling.o Release/obj.target/libsass/src/libsass/src/eval.o Release/obj.target/libsass/src/libsass/src/expand.o Release/obj.target/libsass/src/libsass/src/extend.o Release/obj.target/libsass/src/libsass/src/file.o Release/obj.target/libsass/src/libsass/src/functions.o Release/obj.target/libsass/src/libsass/src/inspect.o Release/obj.target/libsass/src/libsass/src/json.o Release/obj.target/libsass/src/libsass/src/lexer.o Release/obj.target/libsass/src/libsass/src/listize.o Release/obj.target/libsass/src/libsass/src/memory_manager.o Release/obj.target/libsass/src/libsass/src/node.o Release/obj.target/libsass/src/libsass/src/output.o Release/obj.target/libsass/src/libsass/src/parser.o Release/obj.target/libsass/src/libsass/src/plugins.o Release/obj.target/libsass/src/libsass/src/position.o Release/obj.target/libsass/src/libsass/src/prelexer.o Release/obj.target/libsass/src/libsass/src/remove_placeholders.o Release/obj.target/libsass/src/libsass/src/sass.o Release/obj.target/libsass/src/libsass/src/sass2scss.o Release/obj.target/libsass/src/libsass/src/sass_context.o Release/obj.target/libsass/src/libsass/src/sass_functions.o Release/obj.target/libsass/src/libsass/src/sass_interface.o Release/obj.target/libsass/src/libsass/src/sass_util.o Release/obj.target/libsass/src/libsass/src/sass_values.o Release/obj.target/libsass/src/libsass/src/source_map.o Release/obj.target/libsass/src/libsass/src/to_c.o Release/obj.target/libsass/src/libsass/src/to_string.o Release/obj.target/libsass/src/libsass/src/to_value.o Release/obj.target/libsass/src/libsass/src/units.o Release/obj.target/libsass/src/libsass/src/utf8_string.o Release/obj.target/libsass/src/libsass/src/util.o Release/obj.target/libsass/src/libsass/src/values.o
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/binding.o.d.raw   -c -o Release/obj.target/binding/src/binding.o ../src/binding.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/create_string.o.d.raw   -c -o Release/obj.target/binding/src/create_string.o ../src/create_string.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/custom_function_bridge.o.d.raw   -c -o Release/obj.target/binding/src/custom_function_bridge.o ../src/custom_function_bridge.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/custom_importer_bridge.o.d.raw   -c -o Release/obj.target/binding/src/custom_importer_bridge.o ../src/custom_importer_bridge.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_context_wrapper.o.d.raw   -c -o Release/obj.target/binding/src/sass_context_wrapper.o ../src/sass_context_wrapper.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/boolean.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/boolean.o ../src/sass_types/boolean.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/color.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/color.o ../src/sass_types/color.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/error.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/error.o ../src/sass_types/error.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/factory.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/factory.o ../src/sass_types/factory.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/list.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/list.o ../src/sass_types/list.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/map.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/map.o ../src/sass_types/map.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/null.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/null.o ../src/sass_types/null.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/number.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/number.o ../src/sass_types/number.cpp
+  /opt/local/bin/clang++ '-DNODE_GYP_MODULE_NAME=binding' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../node_modules/nan -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++0x -fno-rtti -fno-exceptions -fno-threadsafe-statics -std=c++11 -MMD -MF ./Release/.deps/Release/obj.target/binding/src/sass_types/string.o.d.raw   -c -o Release/obj.target/binding/src/sass_types/string.o ../src/sass_types/string.cpp
+  /opt/local/bin/clang++ -bundle -undefined dynamic_lookup -Wl,-search_paths_first -mmacosx-version-min=10.7 -arch x86_64 -L./Release  -o Release/binding.node Release/obj.target/binding/src/binding.o Release/obj.target/binding/src/create_string.o Release/obj.target/binding/src/custom_function_bridge.o Release/obj.target/binding/src/custom_importer_bridge.o Release/obj.target/binding/src/sass_context_wrapper.o Release/obj.target/binding/src/sass_types/boolean.o Release/obj.target/binding/src/sass_types/color.o Release/obj.target/binding/src/sass_types/error.o Release/obj.target/binding/src/sass_types/factory.o Release/obj.target/binding/src/sass_types/list.o Release/obj.target/binding/src/sass_types/map.o Release/obj.target/binding/src/sass_types/null.o Release/obj.target/binding/src/sass_types/number.o Release/obj.target/binding/src/sass_types/string.o Release/sass.a 
+gyp info ok 
+Installed in ` /Users/fivedoor/Documents/development/zurb/foundation/test190416-2/node_modules/gulp-sass/node_modules/node-sass/vendor/darwin-x64-46/binding.node `
+gulp-rename@1.2.2 node_modules/gulp-rename
+
+beepbeep@1.2.0 node_modules/beepbeep
+
+colors@1.1.2 node_modules/colors
+
+lazypipe@1.0.1 node_modules/lazypipe
+└── stream-combiner@0.2.2 (duplexer@0.1.1, through@2.3.8)
+
+gulp-sourcemaps@1.6.0 node_modules/gulp-sourcemaps
+├── graceful-fs@4.1.3
+├── convert-source-map@1.2.0
+├── strip-bom@2.0.0 (is-utf8@0.2.1)
+├── vinyl@1.1.1 (clone-stats@0.0.1, replace-ext@0.0.1, clone@1.0.2)
+└── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+
+rimraf@2.5.2 node_modules/rimraf
+└── glob@7.0.3 (path-is-absolute@1.0.0, inherits@2.0.1, once@1.3.3, inflight@1.0.4, minimatch@3.0.0)
+
+foundation-emails@2.0.1 node_modules/foundation-emails
+
+siphon-media-query@1.0.0 node_modules/siphon-media-query
+├── css-stringify@2.0.0 (css@2.2.1)
+└── css-parse@2.0.0 (css@2.2.1)
+
+merge-stream@1.0.0 node_modules/merge-stream
+└── readable-stream@2.1.0 (string_decoder@0.10.31, inherits@2.0.1, process-nextick-args@1.0.6, util-deprecate@1.0.2, core-util-is@1.0.2, isarray@1.0.0, unreachable-branch-transform@0.5.1, inline-process-browser@2.0.1)
+
+gulp-replace@0.5.4 node_modules/gulp-replace
+├── replacestream@4.0.0 (escape-string-regexp@1.0.5, object-assign@3.0.0)
+├── istextorbinary@1.0.2 (binaryextensions@1.0.0, textextensions@1.0.1)
+└── readable-stream@2.1.0 (string_decoder@0.10.31, inherits@2.0.1, process-nextick-args@1.0.6, util-deprecate@1.0.2, core-util-is@1.0.2, isarray@1.0.0, unreachable-branch-transform@0.5.1, inline-process-browser@2.0.1)
+
+gulp-cli@1.2.1 node_modules/gulp-cli
+├── mute-stdout@1.0.0
+├── interpret@1.0.0
+├── pretty-hrtime@1.0.2
+├── archy@1.0.0
+├── tildify@1.2.0 (os-homedir@1.0.1)
+├── fancy-log@1.2.0 (time-stamp@1.0.1)
+├── v8flags@2.0.11 (user-home@1.1.1)
+├── chalk@1.1.3 (escape-string-regexp@1.0.5, ansi-styles@2.2.1, supports-color@2.0.0, has-ansi@2.0.0, strip-ansi@3.0.1)
+├── lodash.sortby@4.4.2 (lodash._baseeach@4.1.2, lodash._baseflatten@4.2.0, lodash.rest@4.0.2, lodash._baseiteratee@4.6.1)
+├── gulplog@1.0.0 (glogg@1.0.0)
+├── semver-greatest-satisfied-range@1.0.0 (semver-regex@1.0.0, semver@4.3.6)
+├── wreck@6.3.0 (boom@2.10.1, hoek@2.16.3)
+├── yargs@3.32.0 (decamelize@1.2.0, y18n@3.2.1, camelcase@2.1.1, window-size@0.1.4, os-locale@1.4.0, string-width@1.0.1, cliui@3.2.0)
+├── matchdep@1.0.1 (stack-trace@0.0.9, findup-sync@0.3.0, resolve@1.1.7, micromatch@2.3.7)
+└── liftoff@2.2.1 (extend@2.0.1, rechoir@0.6.2, flagged-respawn@0.3.2, findup-sync@0.3.0, resolve@1.1.7)
+
+yargs@4.6.0 node_modules/yargs
+├── decamelize@1.2.0
+├── camelcase@2.1.1
+├── y18n@3.2.1
+├── window-size@0.2.0
+├── yargs-parser@2.4.0
+├── require-main-filename@1.0.1
+├── lodash.assign@4.0.8 (lodash.rest@4.0.2, lodash.keys@4.0.6)
+├── os-locale@1.4.0 (lcid@1.0.0)
+├── cliui@3.2.0 (wrap-ansi@2.0.0, strip-ansi@3.0.1)
+├── string-width@1.0.1 (strip-ansi@3.0.1, code-point-at@1.0.0, is-fullwidth-code-point@1.0.0)
+├── pkg-conf@1.1.2 (object-assign@4.0.1, symbol@0.2.1, find-up@1.1.2, load-json-file@1.1.0)
+└── read-pkg-up@1.0.1 (find-up@1.1.2, read-pkg@1.1.0)
+
+gulp-load-plugins@1.2.2 node_modules/gulp-load-plugins
+├── multimatch@2.0.0 (array-differ@1.0.0, array-union@1.0.1, minimatch@2.0.10)
+├── findup-sync@0.2.1 (glob@4.3.5)
+├── resolve@1.1.7
+└── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpolate@3.0.0, beeper@1.1.0, lodash._reevaluate@3.0.0, object-assign@3.0.0, lodash._reescape@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, chalk@1.1.3, lodash.template@3.6.2, gulplog@1.0.0, through2@2.0.1, multipipe@0.1.2, dateformat@1.0.12)
+
+gulp-zip@3.2.0 node_modules/gulp-zip
+├── yazl@2.3.0 (buffer-crc32@0.2.5)
+├── chalk@1.1.3 (escape-string-regexp@1.0.5, supports-color@2.0.0, ansi-styles@2.2.1, strip-ansi@3.0.1, has-ansi@2.0.0)
+├── concat-stream@1.5.1 (inherits@2.0.1, typedarray@0.0.6, readable-stream@2.0.6)
+├── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+└── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, beeper@1.1.0, lodash._reescape@3.0.0, lodash._reinterpolate@3.0.0, object-assign@3.0.0, lodash._reevaluate@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, lodash.template@3.6.2, gulplog@1.0.0, multipipe@0.1.2, dateformat@1.0.12)
+
+gulp-htmlmin@1.3.0 node_modules/gulp-htmlmin
+├── object-assign@4.0.1
+├── tryit@1.0.2
+├── bufferstreams@1.1.0
+├── readable-stream@2.1.0 (string_decoder@0.10.31, process-nextick-args@1.0.6, inherits@2.0.1, util-deprecate@1.0.2, core-util-is@1.0.2, isarray@1.0.0, unreachable-branch-transform@0.5.1, inline-process-browser@2.0.1)
+├── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, beeper@1.1.0, lodash._reinterpolate@3.0.0, lodash._reevaluate@3.0.0, object-assign@3.0.0, lodash._reescape@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, chalk@1.1.3, lodash.template@3.6.2, gulplog@1.0.0, through2@2.0.1, multipipe@0.1.2, dateformat@1.0.12)
+└── html-minifier@1.5.0 (he@1.0.0, ncname@1.0.0, relateurl@0.2.6, commander@2.9.0, change-case@2.3.1, concat-stream@1.5.1, clean-css@3.4.12, uglify-js@2.6.2)
+
+gulp-html-src@1.0.0 node_modules/gulp-html-src
+├── extend@1.2.1
+├── q@1.0.1
+├── vinyl@0.2.3 (clone-stats@0.0.1)
+├── through2@0.4.2 (readable-stream@1.0.34, xtend@2.1.2)
+└── cheerio@0.13.1 (underscore@1.5.2, entities@0.5.0, CSSselect@0.4.1, htmlparser2@3.4.0)
+
+panini@1.3.0 node_modules/panini
+├── deepmerge@0.2.10
+├── front-matter@2.0.7
+├── marked@0.3.5
+├── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+├── glob@7.0.3 (path-is-absolute@1.0.0, inherits@2.0.1, once@1.3.3, inflight@1.0.4, minimatch@3.0.0)
+├── js-yaml@3.6.0 (esprima@2.7.2, argparse@1.0.7)
+├── highlight.js@8.9.1
+└── handlebars@4.0.5 (async@1.5.2, source-map@0.4.4, optimist@0.6.1, uglify-js@2.6.2)
+
+gulp-inline-css@3.1.0 node_modules/gulp-inline-css
+├── through2@0.6.5 (xtend@4.0.1, readable-stream@1.0.34)
+├── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reevaluate@3.0.0, object-assign@3.0.0, beeper@1.1.0, lodash._reinterpolate@3.0.0, lodash._reescape@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, chalk@1.1.3, lodash.template@3.6.2, gulplog@1.0.0, through2@2.0.1, multipipe@0.1.2, dateformat@1.0.12)
+└── inline-css@2.2.2 (flatten@0.0.1, css-property@2.0.0, extend@3.0.0, style-selector@2.0.1, object.pick@1.1.2, css-rules@1.0.2, bluebird@2.10.2, extract-css@1.0.3, cheerio@0.19.0)
+
+gulp-litmus@0.0.7 node_modules/gulp-litmus
+├── chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+├── lodash@2.4.2
+├── cli-table@0.3.1 (colors@1.0.3)
+├── event-stream@3.1.7 (pause-stream@0.0.11, stream-combiner@0.0.4, duplexer@0.1.1, from@0.1.3, map-stream@0.1.0, split@0.2.10, through@2.3.8)
+├── request@2.36.0 (forever-agent@0.5.2, aws-sign2@0.5.0, qs@0.6.6, tunnel-agent@0.4.2, oauth-sign@0.3.0, mime@1.2.11, json-stringify-safe@5.0.1, tough-cookie@2.2.2, node-uuid@1.4.7, http-signature@0.10.1, form-data@0.1.4, hawk@1.0.0)
+├── gulp-util@2.2.20 (lodash._reinterpolate@2.4.1, minimist@0.2.0, chalk@0.5.1, vinyl@0.2.3, through2@0.5.1, lodash.template@2.4.1, multipipe@0.1.2)
+├── litmus-api@0.3.2 (bluebird@1.2.4)
+├── dateformat@1.0.12 (get-stdin@4.0.1, meow@3.7.0)
+├── cheerio@0.17.0 (entities@1.1.1, dom-serializer@0.0.1, CSSselect@0.4.1, htmlparser2@3.7.3)
+├── xmlbuilder@2.2.1 (lodash-node@2.4.1)
+└── nodemailer@0.7.1 (public-address@0.1.1, directmail@0.1.8, he@0.3.6, simplesmtp@0.3.35, readable-stream@1.1.14, mailcomposer@0.2.12, aws-sdk@2.0.5)
+
+inky@1.3.4 node_modules/inky
+├── object-values@1.0.0
+├── multiline@1.0.2 (strip-indent@1.0.1)
+├── mkdirp@0.5.1 (minimist@0.0.8)
+├── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+├── vinyl-fs@2.4.3 (vali-date@1.0.0, is-valid-glob@0.3.0, object-assign@4.0.1, graceful-fs@4.1.3, lazystream@1.0.0, strip-bom-stream@1.0.0, strip-bom@2.0.0, lodash.isequal@4.1.4, through2-filter@2.0.0, vinyl@1.1.1, duplexify@3.4.3, glob-stream@5.3.2, readable-stream@2.1.0)
+└── cheerio@0.20.0 (entities@1.1.1, dom-serializer@0.1.0, css-select@1.2.0, htmlparser2@3.8.3, jsdom@7.2.2, lodash@4.11.1)
+
+gulp-awspublish@3.0.1 node_modules/gulp-awspublish
+├── pad-component@0.0.1
+├── clone@0.2.0
+├── mime@1.3.4
+├── vinyl@0.4.6 (clone-stats@0.0.1)
+├── through2@0.6.5 (xtend@4.0.1, readable-stream@1.0.34)
+├── pascal-case@1.1.2 (upper-case-first@1.1.2, camel-case@1.2.2)
+├── gulp-util@2.2.20 (lodash._reinterpolate@2.4.1, minimist@0.2.0, vinyl@0.2.3, chalk@0.5.1, through2@0.5.1, lodash.template@2.4.1, multipipe@0.1.2, dateformat@1.0.12)
+├── aws-sdk@2.3.3 (sax@1.1.5, xml2js@0.4.15, jmespath@0.15.0, xmlbuilder@2.6.2)
+└── xml-json@2.0.2 (extend@1.3.0, xml-nodes@0.1.5, minimist@0.2.0, ldjson-stream@1.2.1, pumpify@1.3.4, xml-objects@0.0.1)
+
+gulp-imagemin@2.4.0 node_modules/gulp-imagemin
+├── object-assign@4.0.1
+├── plur@2.1.2 (irregular-plurals@1.1.0)
+├── chalk@1.1.3 (escape-string-regexp@1.0.5, ansi-styles@2.2.1, supports-color@2.0.0, has-ansi@2.0.0, strip-ansi@3.0.1)
+├── through2-concurrent@1.1.0 (through2@2.0.1)
+├── pretty-bytes@2.0.1 (get-stdin@4.0.1, number-is-nan@1.0.0, meow@3.7.0)
+├── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpolate@3.0.0, beeper@1.1.0, object-assign@3.0.0, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, lodash.template@3.6.2, gulplog@1.0.0, through2@2.0.1, multipipe@0.1.2, dateformat@1.0.12)
+└── imagemin@4.0.0 (optional@0.1.3, stream-combiner2@1.1.1, buffer-to-vinyl@1.1.0, concat-stream@1.5.1, readable-stream@2.1.0, vinyl-fs@2.4.3, imagemin-svgo@4.2.1, imagemin-gifsicle@4.2.0, imagemin-optipng@4.3.0, imagemin-jpegtran@4.3.2)
+
+babel-preset-es2015@6.6.0 node_modules/babel-preset-es2015
+├── babel-plugin-transform-es2015-duplicate-keys@6.6.4 (babel-types@6.7.2, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-template-literals@6.6.5 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-computed-properties@6.6.5 (babel-template@6.7.0, babel-helper-define-map@6.6.5, babel-runtime@5.8.38)
+├── babel-plugin-check-es2015-constants@6.7.2 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-spread@6.6.5 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-modules-commonjs@6.7.4 (babel-plugin-transform-strict-mode@6.6.5, babel-template@6.7.0, babel-types@6.7.2, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-shorthand-properties@6.5.0 (babel-types@6.7.2, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-object-super@6.6.5 (babel-helper-replace-supers@6.7.0, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-block-scoped-functions@6.6.5 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-function-name@6.5.0 (babel-types@6.7.2, babel-helper-function-name@6.6.0, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-literals@6.5.0 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-sticky-regex@6.5.0 (babel-helper-regex@6.6.5, babel-types@6.7.2, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-for-of@6.6.0 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-arrow-functions@6.5.2 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-destructuring@6.6.5 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-unicode-regex@6.5.0 (regexpu-core@1.0.0, babel-helper-regex@6.6.5, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-typeof-symbol@6.6.0 (babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-block-scoping@6.7.1 (babel-template@6.7.0, babel-types@6.7.2, babel-traverse@6.7.6, lodash@3.10.1, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-classes@6.6.5 (babel-helper-optimise-call-expression@6.6.0, babel-helper-replace-supers@6.7.0, babel-messages@6.7.2, babel-helper-function-name@6.6.0, babel-template@6.7.0, babel-helper-define-map@6.6.5, babel-types@6.7.2, babel-traverse@6.7.6, babel-runtime@5.8.38)
+├── babel-plugin-transform-es2015-parameters@6.7.0 (babel-helper-get-function-arity@6.6.5, babel-helper-call-delegate@6.6.5, babel-template@6.7.0, babel-types@6.7.2, babel-traverse@6.7.6, babel-runtime@5.8.38)
+└── babel-plugin-transform-regenerator@6.6.5 (babel-plugin-syntax-async-functions@6.5.0, private@0.1.6, babylon@6.7.0, babel-types@6.7.2, babel-traverse@6.7.6, babel-runtime@5.8.38)
+
+babel-core@6.7.6 node_modules/babel-core
+├── slash@1.0.0
+├── babel-messages@6.7.2
+├── babel-template@6.7.0
+├── path-exists@1.0.0
+├── shebang-regex@1.0.0
+├── path-is-absolute@1.0.0
+├── babel-helpers@6.6.0
+├── private@0.1.6
+├── babylon@6.7.0
+├── convert-source-map@1.2.0
+├── source-map@0.5.3
+├── debug@2.2.0 (ms@0.7.1)
+├── babel-types@6.7.2 (to-fast-properties@1.0.2, esutils@2.0.2)
+├── minimatch@2.0.10 (brace-expansion@1.1.3)
+├── babel-code-frame@6.7.5 (js-tokens@1.0.3, esutils@2.0.2, chalk@1.1.3, repeating@1.1.3)
+├── babel-generator@6.7.5 (trim-right@1.0.1, repeating@1.1.3, is-integer@1.0.6, detect-indent@3.0.1)
+├── babel-traverse@6.7.6 (globals@8.18.0, repeating@1.1.3, invariant@2.2.1)
+├── json5@0.4.0
+├── lodash@3.10.1
+├── babel-runtime@5.8.38 (core-js@1.2.6)
+└── babel-register@6.7.2 (home-or-tmp@1.0.0, mkdirp@0.5.1, source-map-support@0.2.10, core-js@2.2.2)
+
+gulp-if@2.0.0 node_modules/gulp-if
+├── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+├── gulp-match@1.0.1 (minimatch@3.0.0)
+└── ternary-stream@2.0.0 (fork-stream@0.0.4, duplexify@3.4.3)
+
+gulp@4.0.0-alpha.2 node_modules/gulp
+├── vinyl-fs@2.4.3 (vali-date@1.0.0, is-valid-glob@0.3.0, object-assign@4.0.1, graceful-fs@4.1.3, lazystream@1.0.0, strip-bom-stream@1.0.0, strip-bom@2.0.0, lodash.isequal@4.1.4, through2-filter@2.0.0, vinyl@1.1.1, mkdirp@0.5.1, through2@2.0.1, duplexify@3.4.3, glob-stream@5.3.2, readable-stream@2.1.0)
+├── undertaker@0.15.0 (undertaker-registry@1.0.0, lodash.flatten@4.2.0, lodash.defaults@4.0.1, lodash.reduce@4.3.0, lodash.map@4.3.0, bach@0.5.0, es6-weak-map@2.0.1, last-run@1.1.0)
+└── chokidar@1.4.3 (path-is-absolute@1.0.0, inherits@2.0.1, glob-parent@2.0.0, async-each@1.0.0, is-glob@2.0.1, is-binary-path@1.0.1, anymatch@1.3.0, readdirp@2.0.0, fsevents@1.0.11)
+
+browser-sync@2.12.3 node_modules/browser-sync
+├── ucfirst@1.0.0
+├── emitter-steward@1.0.0
+├── dev-ip@1.0.1
+├── immutable@3.7.6
+├── ua-parser-js@0.7.10
+├── qs@6.1.0
+├── opn@3.0.3 (object-assign@4.0.1)
+├── browser-sync-client@2.4.2 (etag@1.7.0, fresh@0.3.0)
+├── portscanner@1.0.0 (async@0.1.15)
+├── http-proxy@1.13.2 (eventemitter3@1.2.0, requires-port@1.0.0)
+├── connect@3.4.1 (utils-merge@1.0.0, parseurl@1.3.1, debug@2.2.0, finalhandler@0.4.1)
+├── serve-static@1.10.2 (escape-html@1.0.3, parseurl@1.3.1, send@0.13.1)
+├── fs-extra@0.26.7 (path-is-absolute@1.0.0, graceful-fs@4.1.3, klaw@1.2.0, jsonfile@2.3.0)
+├── resp-modifier@6.0.0 (debug@2.2.0, minimatch@2.0.10)
+├── micromatch@2.3.7 (filename-regex@2.0.0, is-glob@2.0.1, array-unique@0.2.1, normalize-path@2.0.1, is-extglob@1.0.0, extglob@0.3.2, arr-diff@2.0.0, regex-cache@0.4.3, expand-brackets@0.1.5, kind-of@3.0.2, object.omit@2.0.0, parse-glob@3.0.4, braces@1.8.3)
+├── socket.io@1.4.5 (has-binary@0.1.7, debug@2.2.0, socket.io-parser@2.2.6, socket.io-adapter@0.4.0, engine.io@1.6.8, socket.io-client@1.4.5)
+├── serve-index@1.7.3 (escape-html@1.0.3, parseurl@1.3.1, batch@0.5.3, http-errors@1.3.1, mime-types@2.1.10, accepts@1.2.13, debug@2.2.0)
+├── yargs@4.4.0 (decamelize@1.2.0, camelcase@2.1.1, y18n@3.2.1, window-size@0.2.0, yargs-parser@2.4.0, require-main-filename@1.0.1, lodash.assign@4.0.8, os-locale@1.4.0, cliui@3.2.0, string-width@1.0.1, pkg-conf@1.1.2, read-pkg-up@1.0.1)
+├── localtunnel@1.8.1 (openurl@1.1.0, debug@2.2.0, yargs@3.29.0, request@2.65.0)
+├── bs-recipes@1.2.2
+├── easy-extender@2.3.2 (lodash@3.10.1)
+├── eazy-logger@2.1.3 (lodash.clonedeep@4.3.1, tfunk@3.0.2, opt-merger@1.1.1)
+├── lodash@4.10.0
+├── browser-sync-ui@0.5.19 (async-each-series@0.1.1, connect-history-api-fallback@1.2.0, stream-throttle@0.1.3, weinre@2.0.0-pre-I0Z7U9OV)
+└── chokidar@1.4.3 (path-is-absolute@1.0.0, inherits@2.0.1, glob-parent@2.0.0, async-each@1.0.0, is-glob@2.0.1, is-binary-path@1.0.1, anymatch@1.3.0, readdirp@2.0.0, fsevents@1.0.11)
+
+gulp-sass@2.2.0 node_modules/gulp-sass
+├── object-assign@4.0.1
+├── vinyl-sourcemaps-apply@0.2.1 (source-map@0.5.3)
+├── through2@2.0.1 (xtend@4.0.1, readable-stream@2.0.6)
+├── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reevaluate@3.0.0, beeper@1.1.0, object-assign@3.0.0, lodash._reescape@3.0.0, lodash._reinterpolate@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, vinyl@0.5.3, chalk@1.1.3, lodash.template@3.6.2, gulplog@1.0.0, multipipe@0.1.2, dateformat@1.0.12)
+└── node-sass@3.4.2 (get-stdin@4.0.1, async-foreach@0.1.3, chalk@1.1.3, nan@2.2.1, mkdirp@0.5.1, glob@5.0.15, npmconf@2.1.2, gaze@0.5.2, meow@3.7.0, request@2.72.0, cross-spawn@2.2.3, sass-graph@2.1.1, node-gyp@3.3.1)
+
+You're all set!
+
+ ✓ New project folder created.
+ ✓ Node modules installed.
+ ✓ Bower components installed.
+
+Now run foundation watch while inside the test190416-2 folder.
