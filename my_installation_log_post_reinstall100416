@@ -1070,18 +1070,31 @@ fivedoors-MacBook-Pro:foundation fivedoor$ export CXX=/usr/bin/clang++
 
 ////////// Try foundation new 
 gyp info spawn args [ 'V=1', 'BUILDTYPE=Release', '-C', 'build' ]
+<<<<<<< HEAD
   /usr/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/fivedoor/.node-gyp/4.4.2/include/node -I/Users/fivedoor/.node-gyp/4.4.2/src -I/Users/fivedoor/.node-gyp/4.4.2/deps/uv/include -I/Users/fivedoor/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+=======
+  /usr/bin/clang++ '-DNODE_GYP_MODULE_NAME=libsass' '-D_DARWIN_USE_64_BIT_INODE=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DLIBSASS_VERSION="3.3.2"' -I/Users/johnhampton/.node-gyp/4.4.2/include/node -I/Users/johnhampton/.node-gyp/4.4.2/src -I/Users/johnhampton/.node-gyp/4.4.2/deps/uv/include -I/Users/johnhampton/.node-gyp/4.4.2/deps/v8/include -I../src/libsass/include  -Os -gdwarf-2 -mmacosx-version-min=10.7 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=c++11 -stdlib=libc++ -fno-threadsafe-statics -fno-strict-aliasing -MMD -MF ./Release/.deps/Release/obj.target/libsass/src/libsass/src/ast.o.d.raw   -c -o Release/obj.target/libsass/src/libsass/src/ast.o ../src/libsass/src/ast.cpp
+>>>>>>> 269479d3235ea824574c3c4dde0d37dff2bf818e
 make: /usr/bin/clang++: No such file or directory
 make: *** [Release/obj.target/libsass/src/libsass/src/ast.o] Error 1
 gyp ERR! build error 
 gyp ERR! stack Error: `make` failed with exit code: 2
+<<<<<<< HEAD
 gyp ERR! stack     at ChildProcess.onExit (/Users/fivedoor/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+=======
+gyp ERR! stack     at ChildProcess.onExit (/Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/lib/build.js:276:23)
+>>>>>>> 269479d3235ea824574c3c4dde0d37dff2bf818e
 gyp ERR! stack     at emitTwo (events.js:87:13)
 gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
 gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
 gyp ERR! System Darwin 10.8.0
+<<<<<<< HEAD
 gyp ERR! command "/usr/local/bin/node" "/Users/fivedoor/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
 gyp ERR! cwd /Users/fivedoor/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass
+=======
+gyp ERR! command "/usr/local/bin/node" "/Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /Users/johnhampton/Documents/development/zurb/foundation/test190416-1/node_modules/gulp-sass/node_modules/node-sass
+>>>>>>> 269479d3235ea824574c3c4dde0d37dff2bf818e
 gyp ERR! node -v v4.4.2
 gyp ERR! node-gyp -v v3.3.1
 gyp ERR! not ok 
@@ -1112,6 +1125,7 @@ fivedoors-MacBook-Pro:foundation fivedoor$ export CXX=/opt/local/bin/clang++
 // - nvm 0.31.0
 // - git version 1.8.4.2  (latest is 2.6.4 )
 // clang version 3.6.2 
+<<<<<<< HEAD
 
 
 
@@ -1366,3 +1380,5 @@ fivedoors-MacBook-Pro:Test260416 fivedoor$ npm start
 // - nvm 
 // - git 2.8.1 
 // clang  
+=======
+>>>>>>> 269479d3235ea824574c3c4dde0d37dff2bf818e
